@@ -1,0 +1,143 @@
+.about {
+  position: relative;
+  padding: clamp(5rem, 10vw, 9rem) 0;
+  background: #0f0f12;
+  overflow: hidden;
+}
+
+.container {
+  width: min(100% - 4rem, 1280px);
+  margin: 0 auto;
+}
+
+.sectionLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.labelLine {
+  width: 2.5rem;
+  height: 1px;
+  background: #f15b7d;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+}
+
+.textContent {
+  max-width: 36rem;
+}
+
+.heading {
+  color: #ffffff;
+  font-size: clamp(2.5rem, 4.5vw, 3.75rem);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+  margin-bottom: 1.5rem;
+}
+
+.heading span {
+  color: #f15b7d;
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.description:last-of-type {
+  margin-bottom: 0;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.statCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.035);
+  transition: background-color 250ms ease, transform 250ms ease;
+}
+
+.statCard:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-2px);
+}
+
+.statCard svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #f15b7d;
+  margin-bottom: 0.5rem;
+}
+
+.statCard strong {
+  color: #ffffff;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.statCard span {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: min(100% - 3rem, 1280px);
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .textContent {
+    max-width: 100%;
+  }
+
+  .stats {
+    max-width: 28rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: min(100% - 2rem, 1280px);
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .statCard {
+    transition: none;
+  }
+}
+

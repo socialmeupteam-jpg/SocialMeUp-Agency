@@ -1,0 +1,5 @@
+.main-layout {
+  position: relative;
+  min-height: 100svh;
+  overflow-x: hidden;
+}
