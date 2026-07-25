@@ -1,71 +1,76 @@
 import { FiArrowRight, FiPlay } from "react-icons/fi";
 
+import homepageHero from "../../assets/images/homepage-hero.webp";
+
 import styles from "./Hero.module.css";
 
 function Hero() {
   return (
     <section
       className={styles.hero}
+      style={{ backgroundImage: `url(${homepageHero})` }}
       aria-labelledby="hero-heading"
     >
       <div className={styles.overlay} />
 
       <div className={styles.heroContainer}>
         <div className={styles.heroContent}>
-          <p className={styles.eyebrow}>
-            <span className={styles.eyebrowDot} />
-            Digital Marketing Agency
-          </p>
+          <div className={styles.badge}>
+            <span className={styles.badgeDot} aria-hidden="true" />
+            <span>Best Digital Marketing Agency in Lucknow</span>
+          </div>
 
           <h1 id="hero-heading" className={styles.heading}>
-            We Make Brands
+            Best <span>Digital</span>
             <br />
-            <span>Impossible</span> to Ignore.
+            Marketing Agency
+            <br />
+            in Lucknow
           </h1>
 
           <p className={styles.description}>
-One of the top digital marketing agency in Lucknow you can believe on.
+            One of the top digital marketing agency in Lucknow you can believe on. 
             <br className={styles.desktopBreak} />
-            SocialMeUp has been working with some of the huge businesses
+           SocialMeUp has been working with some of the huge businesses from
             <br className={styles.desktopBreak} />
-            from Lucknow & Delhi and has delivered the businesses an impactful results.
+            Lucknow & Delhi and has delivered the businesses an impactful results.
           </p>
 
           <div className={styles.actions}>
             <a href="#contact" className={styles.primaryButton}>
-              <span>Let&apos;s Talk</span>
+              <span>Let&apos;s Build Something Remarkable</span>
               <FiArrowRight aria-hidden="true" />
             </a>
 
             <a href="#services" className={styles.secondaryButton}>
-              <span className={styles.playIcon}>
-                <FiPlay aria-hidden="true" />
-              </span>
-              <span>Explore Our Work</span>
+              <FiPlay aria-hidden="true" />
+              <span>Explore Services</span>
             </a>
           </div>
         </div>
 
-        <div className={styles.stats} aria-label="Company statistics">
+        <aside className={styles.statsCard} aria-label="Company statistics">
           <div className={styles.stat}>
-            <strong>500<span>+</span></strong>
+            <strong>
+              500<span>+</span>
+            </strong>
             <span>Projects Delivered</span>
           </div>
 
-          <div className={styles.statDivider} />
-
           <div className={styles.stat}>
-            <strong>50<span>+</span></strong>
-            <span>Happy Clients</span>
+            <strong>
+              50<span>+</span>
+            </strong>
+            <span>Active Clients</span>
           </div>
 
-          <div className={styles.statDivider} />
-
           <div className={styles.stat}>
-            <strong>5<span>+</span></strong>
-            <span>Years of Experience</span>
+            <strong>
+              5<span>+</span>
+            </strong>
+            <span>Years of Excellence</span>
           </div>
-        </div>
+        </aside>
       </div>
     </section>
   );
@@ -87,54 +92,62 @@ export default Hero;
 
 //       <div className={styles.heroContainer}>
 //         <div className={styles.heroContent}>
-//           <div className={styles.badge}>
-//             <span className={styles.badgeDot} aria-hidden="true" />
-//             <span>Best Digital Marketing Agency in Lucknow</span>
-//           </div>
+//           <p className={styles.eyebrow}>
+//             <span className={styles.eyebrowDot} />
+//             Digital Marketing Agency
+//           </p>
 
 //           <h1 id="hero-heading" className={styles.heading}>
-//             Your Growth
+//             Best <span>Digital </span>
+//             <br /> Marketing Agency
 //             <br />
-//             Story Starts
-//             <br />
-//             <span>Here.</span>
+//             in Lucknow
 //           </h1>
 
 //           <p className={styles.description}>
-//             A strategy that actually works. We combine creativity
+// One of the top digital marketing agency in Lucknow you can believe on.
 //             <br className={styles.desktopBreak} />
-//             with data-driven execution to deliver measurable
+//             SocialMeUp has been working with some of the huge businesses
 //             <br className={styles.desktopBreak} />
-//             results for businesses across Lucknow &amp; Delhi.
+//             across Lucknow &amp; Delhi to deliver measurable results and
+//             <br className={styles.desktopBreak} />
+//             help them grow with confidence.
 //           </p>
 
 //           <div className={styles.actions}>
 //             <a href="#contact" className={styles.primaryButton}>
-//               <span>Let&apos;s Build Something Remarkable</span>
+//               <span>Let&apos;s Talk</span>
 //               <FiArrowRight aria-hidden="true" />
 //             </a>
 
 //             <a href="#services" className={styles.secondaryButton}>
-//               <FiPlay aria-hidden="true" />
-//               <span>Explore Services</span>
+//               <span className={styles.playIcon}>
+//                 <FiPlay aria-hidden="true" />
+//               </span>
+//               <span>Explore Our Work</span>
 //             </a>
 //           </div>
+
 //         </div>
 
-//         <div className={styles.statsCard} aria-label="Company statistics">
+//         <div className={styles.stats} aria-label="Company statistics">
 //           <div className={styles.stat}>
 //             <strong>500<span>+</span></strong>
 //             <span>Projects Delivered</span>
 //           </div>
 
+//           <div className={styles.statDivider} />
+
 //           <div className={styles.stat}>
 //             <strong>50<span>+</span></strong>
-//             <span>Active Clients</span>
+//             <span>Happy Clients</span>
 //           </div>
+
+//           <div className={styles.statDivider} />
 
 //           <div className={styles.stat}>
 //             <strong>5<span>+</span></strong>
-//             <span>Years of Excellence</span>
+//             <span>Years of Experience</span>
 //           </div>
 //         </div>
 //       </div>
@@ -143,4 +156,3 @@ export default Hero;
 // }
 
 // export default Hero;
-

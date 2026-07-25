@@ -22,42 +22,42 @@ const services: Service[] = [
     number: "01",
     title: "Digital Marketing",
     description:
-      "Data-driven campaigns that connect your brand with the right audience and drive meaningful growth.",
+      "Our Internet advertising services help businesses reach their target audience and increase their online visibility. We offer customized digital marketing solutions, including search engine optimization (SEO), pay-per-click (PPC) advertising, social media marketing, and email marketing.",
     icon: <FiBarChart2 aria-hidden="true" />,
   },
   {
     number: "02",
     title: "Social Media Marketing",
     description:
-      "Build a powerful social presence with content and strategies that create genuine engagement.",
+      "Managing your Social presence to increase Engagement through Creative Strategies.",
     icon: <FiSmartphone aria-hidden="true" />,
   },
   {
     number: "03",
     title: "Website Development",
     description:
-      "High-performing, conversion-focused websites designed to turn visitors into customers.",
+      "Our software development team specializes in creating high-quality web applications for businesses of all sizes. From front-end design to back-end development, we provide end-to-end web development services using the latest technologies and frameworks.",
     icon: <FiCode aria-hidden="true" />,
   },
   {
     number: "04",
     title: "SEO",
     description:
-      "Improve your visibility, reach the right audience, and grow your organic presence online.",
+      "Improve your Search Engine Visibility through White Hat On-Page and Off-Page SEO.",
     icon: <FiGlobe aria-hidden="true" />,
   },
   {
     number: "05",
-    title: "Content Creation",
+    title: "E-commerce Solutions",
     description:
-      "Stories, visuals, and content that make your brand memorable and impossible to ignore.",
+      "Our e-commerce development solutions help businesses establish a strong online presence. We offer customized e-commerce services using popular platforms like Shopify, Magento and WooCommerce.",
     icon: <FiEdit3 aria-hidden="true" />,
   },
   {
     number: "06",
-    title: "Branding & Design",
+    title: "Lead Generation",
     description:
-      "Create a distinctive visual identity that makes your brand instantly recognizable.",
+      "Optimize your Marketing Strategy to generate High-Converting Leads and improve your ROI.",
     icon: <FiMonitor aria-hidden="true" />,
   },
 ];
@@ -83,8 +83,8 @@ function Services() {
           </h2>
 
           <p className={styles.intro}>
-            From your first idea to your next big milestone, we bring
-            everything together to help your business grow with confidence.
+            From your first idea to your next big milestone, we bring everything
+            together to help your business grow with confidence.
           </p>
         </div>
 

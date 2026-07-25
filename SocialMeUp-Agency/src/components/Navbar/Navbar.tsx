@@ -33,7 +33,7 @@ function Navbar() {
           aria-label="SocialMeUp home"
         >
           <span className={styles.logoMark} aria-hidden="true">
-            <img src="SocialMeUp-Agency/public/Logo.png" alt="SocialMeUp-logo" className="logo" />
+            <img src="/Logo.png" alt="SocialMeUp-logo" className="logo" />
           </span>
 
           <span className={styles.logoText}>
