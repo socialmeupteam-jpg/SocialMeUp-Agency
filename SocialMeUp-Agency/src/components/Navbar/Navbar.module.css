@@ -24,11 +24,10 @@
   width: min(100% - 4rem, 1280px);
   min-height: 3.5rem;
 
-  /* margin: 0 auto; */
+  margin: 0 auto;
 
   box-sizing: border-box;
 }
-
 
 /* LOGO */
 
@@ -58,7 +57,6 @@
 
 .logoMark img {
   object-fit: cover;
- 
 }
 
 .logoText {
@@ -70,7 +68,6 @@
 .logoText span {
   color: #315cff;
 }
-
 
 /* DESKTOP NAVIGATION */
 
@@ -108,7 +105,6 @@
   color: #ffffff;
 }
 
-
 /* CONSULTATION BUTTON */
 
 .consultationButton {
@@ -123,12 +119,7 @@
   border: none;
   border-radius: 999px;
 
-  background: linear-gradient(
-    90deg,
-    #4762fd,
-    #7121f7,
-    #f66780
-  );
+  background: linear-gradient(90deg, #4762fd, #7121f7, #f66780);
 
   color: #ffffff;
 
@@ -149,10 +140,8 @@
 .consultationButton:focus-visible {
   transform: translateY(-2px);
 
-  box-shadow:
-    0 8px 22px rgba(113, 33, 247, 0.28);
+  box-shadow: 0 8px 22px rgba(113, 33, 247, 0.28);
 }
-
 
 /* BACK HOME BUTTON */
 
@@ -249,7 +238,6 @@
   color: #ffffff;
 }
 
-
 /* MOBILE MENU BUTTON */
 
 .menuButton {
@@ -286,7 +274,6 @@
   border-color: rgba(255, 255, 255, 0.5);
 }
 
-
 /* LARGE DESKTOP
    1440px+ */
 
@@ -300,7 +287,6 @@
   }
 }
 
-
 /* DESKTOP / LAPTOP
    1200px - 1439px */
 
@@ -309,7 +295,6 @@
     width: min(100% - 4rem, 1280px);
   }
 }
-
 
 /* SMALL LAPTOP
    1024px - 1199px */
@@ -336,7 +321,6 @@
   }
 }
 
-
 /* TABLET LANDSCAPE
    901px - 1023px */
 
@@ -358,7 +342,6 @@
     font-size: 0.82rem;
   }
 }
-
 
 /* TABLET / MOBILE NAVIGATION
    768px and below */
@@ -408,8 +391,7 @@
     backdrop-filter: blur(1.25rem);
     -webkit-backdrop-filter: blur(1.25rem);
 
-    box-shadow:
-      0 20px 50px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
 
     opacity: 0;
 
@@ -489,7 +471,6 @@
   }
 }
 
-
 /* LARGE MOBILE
    481px - 600px */
 
@@ -516,7 +497,6 @@
     left: 0.75rem;
   }
 }
-
 
 /* MOBILE
    481px and below */
@@ -598,7 +578,6 @@
   }
 }
 
-
 /* VERY SMALL PHONES
    360px and below */
 
@@ -647,7 +626,6 @@
   }
 }
 
-
 /* EXTRA SMALL PHONES
    320px and below */
 
@@ -676,7 +654,6 @@
   }
 }
 
-
 /* TOUCH DEVICES */
 
 @media (hover: none) and (pointer: coarse) {
@@ -698,7 +675,6 @@
     background: transparent;
   }
 }
-
 
 /* REDUCED MOTION */
 

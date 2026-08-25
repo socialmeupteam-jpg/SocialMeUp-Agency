@@ -22,7 +22,7 @@ function Terms() {
 
             <h1>Terms &amp; Conditions</h1>
 
-            <p className={styles.updated}>Last Updated: 28 Dec 2024</p>
+            <p className={styles.updated}>Last Updated: 26 August 2026</p>
           </motion.div>
         </div>
       </section>
