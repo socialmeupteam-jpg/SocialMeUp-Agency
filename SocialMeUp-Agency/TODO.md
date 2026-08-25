@@ -1,24 +1,22 @@
-# Error Resolution Tasks
+# Task Progress
 
-## Critical (Needed for build)
-- [x] 1. `index.html` - Create main HTML entry point
-- [x] 2. `src/components/About/About.tsx` - Create About section component
-- [x] 3. `src/components/About/About.module.css` - Create About section styles
-- [x] 4. `src/styles/variables.css` - Create CSS custom properties
-- [x] 5. `src/styles/reset.css` - Create CSS reset
-- [x] 6. `src/styles/typography.css` - Create typography styles
-- [x] 7. `src/styles/utilities.css` - Create utility classes
-- [x] 8. `src/styles/base/buttons.css` - Create button styles
-- [x] 9. `src/styles/base/animations.css` - Create animation keyframes
-- [x] 10. `src/styles/base/media.css` - Create media query helpers
-- [x] 11. Fix Hero.tsx missing background image reference
-- [x] 12. Remove unused `src/sections/Hero/Hero.tsx` and `Hero.css` duplicates
+## Task: Dark backgrounds for "What We Do" & Industries sections + pink heading spans + animated gradient backgrounds across all sections/pages
 
-## Good to have (not blocking build)
-- [x] 13. `src/layout/MainLayout.tsx` & `MainLayout.css` 
-- [ ] 14. `src/App.css`, `src/index.css`
-- [x] 15. `src/routes/AppRouter.jsx`
+### Steps:
+- [x] 1. Read and understand all relevant files
+- [x] 2. Add gradient/smooth animation keyframes & utility classes to `src/styles/base/animations.css`
+- [x] 3. Services ("What We Do") section → dark theme + pink heading span + animated gradient background
+- [x] 4. Industries section → dark theme + pink heading span + animated gradient background
+- [x] 5. Update heading spans to pink across all sections (About, WhyUs, Blog, Contact, Portfolio, ServicePage, ContactHero, etc.)
+- [x] 6. Add animated gradient backgrounds to all remaining sections/pages (Hero, About, WhyUs, Blog, Testimonials, Contact, Portfolio, ServicePage, ContactPage, BlogDetails/parts, Privacy, Terms)
+- [x] 7. Verify build with `npm run build` / dev server (fixed pre-existing TS unused import errors in BlogCard, PrivacyPolicy, Terms)
 
-## Verify
-- [x] 16. Run build and verify no errors ✅ Build succeeded! 39 modules transformed, dist/ generated.
+### Completed Progress:
+- Understood the project structure and design system (dark sections use #090b13/#0a0c14, pink accent #ff5c84/#f15b7d, blue primary #4d62ff)
+- Identified all section CSS files that need background animation updates
+- Created `src/styles/base/animations.css` with auroraShift, floatSlow, floatSlowReverse, glowPulse, gradientPan keyframes + utility classes; imported in main.tsx
+- Darkened Services & Industries sections to #0a0c14 with pink heading spans and dark cards
+- Applied pink heading spans across About, WhyUs, Blog, Contact, ContactHero, Portfolio, ServicePage
+- Added animated aurora gradient backgrounds to all sections & pages (Hero, About, Services, WhyUs, Industries, Blog, Testimonials, Contact, Portfolio, ServicePage, ContactPage, BlogDetails sub-components, Privacy, Terms)
+- Fixed pre-existing build errors (unused imports) in BlogCard.tsx, PrivacyPolicy.tsx, Terms.tsx
 

@@ -1,0 +1,198 @@
+.content {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+}
+
+.paragraph {
+  margin: 0 0 18px;
+  color: #303646;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.quote {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 74px;
+  margin: 26px 0 22px;
+  padding: 14px 48px 14px 20px;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  border: 1px solid rgba(71, 98, 253, 0.18);
+  border-radius: 14px;
+  background: linear-gradient(
+    100deg,
+    rgba(71, 98, 253, 0.06),
+    rgba(113, 33, 247, 0.045),
+    rgba(246, 103, 128, 0.06)
+  );
+}
+
+.quoteMark {
+  flex-shrink: 0;
+  color: #4762fd;
+  font-size: 50px;
+  font-family: Georgia, serif;
+  font-weight: 800;
+  line-height: 0.7;
+}
+
+.quote p {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  margin: 0;
+  color: #202020;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.quoteSpark {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #f66780;
+  font-size: 25px;
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.section {
+  position: relative;
+  display: grid;
+  grid-template-columns: 47px minmax(0, 1fr);
+  gap: 13px;
+  padding: 12px 8px;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  border-radius: 12px;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.section:hover {
+  background: rgba(71, 98, 253, 0.025);
+  transform: translateX(3px);
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 30px;
+  margin-top: 1px;
+  border: 1px solid rgba(71, 98, 253, 0.22);
+  border-radius: 8px;
+  background: linear-gradient(
+    135deg,
+    rgba(71, 98, 253, 0.07),
+    rgba(246, 103, 128, 0.07)
+  );
+  color: #4762fd;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.sectionBody h2 {
+  margin: 0 0 4px;
+  color: #202020;
+  font-size: 16px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.sectionBody p {
+  margin: 0;
+  color: #444b5b;
+  font-size: 13px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .quote {
+    gap: 16px;
+    padding-right: 44px;
+  }
+
+  .section {
+    grid-template-columns: 45px minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 1025px) {
+  .section {
+    grid-template-columns: 47px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .paragraph {
+    font-size: 14px;
+  }
+
+  .quote {
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px 42px 15px 15px;
+  }
+
+  .quoteMark {
+    font-size: 40px;
+  }
+
+  .section {
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 10px;
+    padding-right: 4px;
+  }
+
+  .number {
+    width: 38px;
+  }
+
+  .sectionBody h2 {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  .quote {
+    gap: 8px;
+    padding: 13px 34px 13px 12px;
+  }
+
+  .quoteMark {
+    font-size: 34px;
+  }
+
+  .quoteSpark {
+    right: 10px;
+    font-size: 20px;
+  }
+
+  .section {
+    grid-template-columns: 36px minmax(0, 1fr);
+    gap: 8px;
+    padding-left: 4px;
+  }
+
+  .number {
+    width: 34px;
+  }
+}

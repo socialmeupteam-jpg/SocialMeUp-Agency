@@ -1,0 +1,286 @@
+.sidebar {
+  position: sticky;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.card,
+.ctaCard {
+  border: 1px solid rgba(71, 98, 253, 0.12);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 15px 40px rgba(32, 32, 32, 0.045);
+}
+
+.card {
+  padding: 18px 16px;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.cardTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #edf0f7;
+  color: #202020;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.cardTitle svg {
+  color: #4762fd;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  padding-top: 8px;
+}
+
+.navigation a {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  min-width: 0;
+  padding: 9px 0;
+  color: #62697a;
+  font-size: 11px;
+  line-height: 1.35;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: color 0.2s ease;
+}
+
+.navigation a:hover {
+  color: #4762fd;
+}
+
+.navigation span {
+  flex-shrink: 0;
+  color: #f66780;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.navigation strong {
+  font-weight: 600;
+}
+
+.ctaCard {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  min-width: 0;
+  padding: 20px;
+  background: linear-gradient(
+    145deg,
+    rgba(71, 98, 253, 0.07),
+    rgba(113, 33, 247, 0.05),
+    rgba(246, 103, 128, 0.07)
+  );
+}
+
+.ctaCard::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: -50px;
+  bottom: -50px;
+  border-radius: 50%;
+  background: rgba(246, 103, 128, 0.1);
+}
+
+.ctaIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  background: #4762fd;
+  color: white;
+}
+
+.ctaCard h3 {
+  margin: 0 0 7px;
+  color: #202020;
+  font-size: 15px;
+}
+
+.ctaCard p {
+  margin: 0 0 15px;
+  color: #697083;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.ctaCard button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: 100%;
+  max-width: 100%;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #4762fd;
+  color: white;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.ctaCard button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(71, 98, 253, 0.25);
+}
+
+.shareContent {
+  position: relative;
+}
+
+.shareButton {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 18px;
+
+  padding: 11px 17px;
+
+  border: 0;
+
+  border-radius: 9px;
+
+  background: linear-gradient(135deg, #4762fd, #7121f7);
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+  max-width: 100%;
+
+  box-shadow: 0 8px 22px rgba(71, 98, 253, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.shareButton:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 28px rgba(71, 98, 253, 0.28);
+}
+
+.shareButton:active {
+  transform: translateY(0);
+}
+
+.shareButton svg {
+  transition: transform 0.3s ease;
+}
+
+.shareButton:hover svg {
+  transform: translateX(3px);
+}
+
+.shareMessage {
+  display: block;
+
+  margin-top: 10px;
+
+  color: #4762fd;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  animation: shareMessageIn 0.3s ease;
+}
+
+@media (min-width: 1200px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+  }
+
+  .card,
+  .ctaCard {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    gap: 14px;
+  }
+
+  .card,
+  .ctaCard {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .card {
+    padding: 16px 14px;
+  }
+
+  .ctaCard {
+    padding: 18px;
+  }
+
+  .navigation a,
+  .ctaCard h3,
+  .ctaCard p {
+    overflow-wrap: anywhere;
+  }
+
+  .shareButton {
+    max-width: 100%;
+  }
+}
+
+@keyframes shareMessageIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

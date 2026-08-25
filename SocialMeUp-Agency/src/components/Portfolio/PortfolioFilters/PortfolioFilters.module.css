@@ -1,0 +1,100 @@
+.filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 100%;
+  gap: 10px;
+
+  margin-top: 18px;
+
+  margin-bottom: 28px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  gap: 8px;
+
+  min-height: 38px;
+  padding: 0 16px;
+
+  border: 1px solid rgba(80, 91, 120, 0.15);
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  color: #71809b;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 14px rgba(27, 35, 60, 0.04);
+
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.button:hover {
+  color: #4d63ff;
+
+  border-color: rgba(78, 99, 255, 0.25);
+
+  transform: translateY(-2px);
+}
+
+.button span {
+  display: flex;
+  align-items: center;
+}
+
+.button svg {
+  font-size: 14px;
+}
+
+.active {
+  border-color: transparent;
+
+  background: linear-gradient(100deg, #5268ff, #4c5fff);
+
+  color: #ffffff;
+
+  box-shadow: 0 9px 24px rgba(76, 95, 255, 0.25);
+}
+
+.active:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 680px) {
+  .filters {
+    gap: 8px;
+  }
+
+  .button {
+    min-width: 0;
+    padding: 0 12px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 380px) {
+  .filters {
+    gap: 6px;
+  }
+
+  .button {
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: 0 10px;
+  }
+}

@@ -2,4 +2,59 @@
   position: relative;
   min-height: 100svh;
   overflow-x: hidden;
+  background: #ffffff;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
+
+.homePage section {
+  position: relative;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.homePage *,
+.homePage *::before,
+.homePage *::after {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  .homePage {
+    overflow: hidden;
+  }
+}
+
+/* Keep the existing desktop layout while preventing viewport overflow at
+   common responsive breakpoints. */
+@media (max-width: 1199px) {
+  .homePage {
+    width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .homePage {
+    min-height: 100svh;
+  }
+}
+
+@media (max-width: 767px) {
+  .homePage {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (min-width: 1600px) {
+  .homePage {
+    width: 100%;
+  }
+}
+

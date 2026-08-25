@@ -1,7 +1,26 @@
 import { FiTarget, FiTrendingUp, FiUsers } from "react-icons/fi";
 import { GoLightBulb } from "react-icons/go";
+import { motion, type Variants } from "framer-motion";
 
 import styles from "./About.module.css";
+
+const fadeUp: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
+const staggerContainer: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+};
 
 function About() {
   return (
@@ -11,15 +30,27 @@ function About() {
       aria-labelledby="about-heading"
     >
       <div className={styles.container}>
-        <div className={styles.sectionLabel}>
-          <span className={styles.labelLine} />
+        <motion.div
+          className={styles.sectionLabel}
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+        >
           <span>About Us</span>
-        </div>
+        </motion.div>
 
-        <div className={styles.content}>
-          <div className={styles.textContent}>
+        <motion.div
+          className={styles.content}
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+        >
+          {/* Left Side */}
+          <motion.div variants={fadeUp} className={styles.textContent}>
             <h2 id="about-heading" className={styles.heading}>
-              Best Digital Marketing Agency in Lucknow– SocialMeUp
+              Best Digital Marketing Agency in Lucknow – SocialMeUp
               <br />
               <span>stand out &amp; deliver.</span>
             </h2>
@@ -45,34 +76,68 @@ function About() {
               website is customized to reflect the uniqueness of the brand they
               represent.
             </p>
-          </div>
+          </motion.div>
 
-          <div className={styles.stats}>
-            <div className={styles.statCard}>
-              <FiTarget aria-hidden="true" />
-              <strong>Strategy</strong>
-              <span>Result-oriented approaches</span>
+          {/* Right Side */}
+          <motion.div variants={fadeUp} className={styles.rightContent}>
+            {/* Image */}
+            <div className={styles.aboutImageContainer}>
+              <div className={styles.aboutImageWrapper}>
+                <img
+                  src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+                  alt="SocialMeUp Team"
+                  className={styles.aboutImage}
+                />
+
+                <div className={styles.aboutImageOverlay}></div>
+              </div>
+
+              {/* Floating Badge */}
+              <div className={styles.aboutFloatingBadge}>
+                <div className={styles.badgeContent}>
+                  <div className={styles.badgeLogo}>
+                    <img
+                      src="/Logo.png"
+                      alt="SocialMeUp Logo"
+                      className={styles.badgeLogoImage}
+                    />
+                  </div>
+                  <div className={styles.badgeText}>
+                    <h4>Since 2021</h4>
+                    <p>Trusted by 50+ Clients</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className={styles.statCard}>
-              <FiUsers aria-hidden="true" />
-              <strong>Expert Team</strong>
-              <span>50+ skilled professionals</span>
-            </div>
+            {/* Stats */}
+            <div className={styles.stats}>
+              <div className={styles.statCard}>
+                <FiTarget />
+                <strong>Strategy</strong>
+                <span>Result-oriented approaches</span>
+              </div>
 
-            <div className={styles.statCard}>
-              <GoLightBulb aria-hidden="true" />
-              <strong>Innovation</strong>
-              <span>Creative digital solutions</span>
-            </div>
+              <div className={styles.statCard}>
+                <FiUsers />
+                <strong>Expert Team</strong>
+                <span>50+ Skilled Professionals</span>
+              </div>
 
-            <div className={styles.statCard}>
-              <FiTrendingUp aria-hidden="true" />
-              <strong>Track Record</strong>
-              <span>Proven success stories</span>
+              <div className={styles.statCard}>
+                <GoLightBulb />
+                <strong>Innovation</strong>
+                <span>Creative Digital Solutions</span>
+              </div>
+
+              <div className={styles.statCard}>
+                <FiTrendingUp />
+                <strong>Track Record</strong>
+                <span>Proven Success Stories</span>
+              </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

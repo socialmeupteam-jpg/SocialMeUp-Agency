@@ -1,7 +1,7 @@
 :root {
   --color-white: #ffffff;
   --color-black: #000000;
-  --color-background: #0f0f12;
+  --color-background: #ffffff;
   --color-primary: #4d62ff;
   --color-primary-hover: #5d70ff;
   --color-accent: #f15b7d;
@@ -16,7 +16,7 @@
     sans-serif;
 
   font-family: var(--font-family-base);
-  color: var(--color-white);
+  color: var(--color-black);
   background: var(--color-background);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -119,11 +119,11 @@ a {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(20, 30, 50, 0.3);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(20, 30, 50, 0.5);
 }
 
 @media (prefers-reduced-motion: reduce) {

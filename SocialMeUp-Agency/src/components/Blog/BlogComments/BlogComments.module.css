@@ -1,0 +1,184 @@
+.wrapper {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-top: 35px;
+  padding: 16px 22px 18px;
+  border: 1px solid rgba(71, 98, 253, 0.2);
+  border-radius: 17px;
+  background: linear-gradient(
+    110deg,
+    rgba(71, 98, 253, 0.045),
+    rgba(113, 33, 247, 0.035),
+    rgba(246, 103, 128, 0.055)
+  );
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 15px;
+  min-width: 0;
+}
+
+.headingIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4762fd;
+}
+
+.heading h2 {
+  margin: 0;
+  color: #202020;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.heading p {
+  margin: 2px 0 0;
+  color: #707687;
+  font-size: 14px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 25px;
+  min-width: 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.field label {
+  color: #202020;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.field input,
+.field textarea {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #e1e5ef;
+  border-radius: 7px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 9px 11px;
+  color: #202020;
+  font-family: inherit;
+  font-size: 14px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 66px;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #a3a8b5;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: #4762fd;
+  box-shadow: 0 0 0 3px rgba(71, 98, 253, 0.08);
+}
+
+.submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  gap: 7px;
+  min-width: 168px;
+  border: 0;
+  border-radius: 7px;
+  padding: 9px 16px;
+  background: linear-gradient(90deg, #4762fd, #7121f7, #f66780);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  max-width: 100%;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(71, 98, 253, 0.2);
+}
+
+/* Tablet and smaller laptop widths retain the two-column layout with
+   slightly tighter spacing, while leaving the desktop layout unchanged. */
+@media (min-width: 651px) and (max-width: 1024px) {
+  .wrapper {
+    padding-inline: 18px;
+  }
+
+  .row {
+    gap: 16px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .row {
+    gap: 25px;
+  }
+}
+
+@media (min-width: 1441px) {
+  .wrapper {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .wrapper {
+    padding: 16px;
+  }
+
+  .heading {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    row-gap: 4px;
+  }
+
+  .heading p {
+    flex: 1 1 100%;
+    margin-left: 29px;
+  }
+
+  .row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .submit {
+    width: 100%;
+  }
+}

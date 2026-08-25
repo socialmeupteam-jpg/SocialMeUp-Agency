@@ -78,7 +78,96 @@
   }
 }
 
+/* Animated Gradient (Aurora) Background */
+@keyframes auroraShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradientPan {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  33% {
+    transform: translate(40px, -30px) rotate(8deg) scale(1.08);
+  }
+  66% {
+    transform: translate(-30px, 25px) rotate(-6deg) scale(0.95);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+}
+
+/* Floating orbs / glow shapes */
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(30px, -40px, 0) scale(1.1);
+  }
+}
+
+@keyframes floatSlowReverse {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-35px, 30px, 0) scale(1.12);
+  }
+}
+
+/* Glow pulse */
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    filter: blur(110px);
+  }
+  50% {
+    opacity: 0.6;
+    filter: blur(130px);
+  }
+}
+
+/* Soft shine sweep */
+@keyframes shineSweep {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-15deg);
+  }
+}
+
 /* Utility classes */
+.animate-gradient {
+  background-size: 300% 300%;
+  animation: auroraShift 16s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 14s ease-in-out infinite;
+}
+
+.animate-float-slow-reverse {
+  animation: floatSlowReverse 16s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glowPulse 8s ease-in-out infinite;
+}
+
 .animate-fadeIn {
   animation: fadeIn 500ms ease forwards;
 }

@@ -1,0 +1,314 @@
+.card {
+  box-sizing: border-box;
+  max-width: 100%;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(61, 70, 99, 0.15);
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 8px 28px rgba(34, 43, 72, 0.06);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.3s ease,
+    box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(79, 96, 240, 0.24);
+
+  box-shadow:
+    0 22px 45px rgba(34, 43, 72, 0.12);
+}
+
+.visual {
+  position: relative;
+
+  max-width: 100%;
+
+  height: 165px;
+
+  overflow: hidden;
+
+  color: #ffffff;
+}
+
+.gridPattern {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.17;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.16) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.16) 1px,
+      transparent 1px
+    );
+
+  background-size: 25px 25px;
+}
+
+.visual::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 80% 15%,
+      rgba(255, 255, 255, 0.2),
+      transparent 28%
+    );
+}
+
+.type {
+  position: absolute;
+  z-index: 3;
+
+  left: 17px;
+  bottom: 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.type svg {
+  font-size: 13px;
+}
+
+.external {
+  position: absolute;
+  z-index: 4;
+
+  top: 14px;
+  right: 14px;
+
+  display: grid;
+  place-items: center;
+
+  width: 27px;
+  height: 27px;
+
+  border: 0;
+  border-radius: 7px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.external:hover {
+  background: rgba(255, 255, 255, 0.28);
+
+  transform: scale(1.08);
+}
+
+.abstractShape {
+  position: absolute;
+  z-index: 2;
+
+  top: 42%;
+  left: 50%;
+
+  width: 125px;
+  height: 70px;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(-8deg);
+}
+
+.abstractShape span {
+  position: absolute;
+
+  display: block;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.abstractShape span:nth-child(1) {
+  inset: 17px 0 0 25px;
+
+  transform: rotate(8deg);
+}
+
+.abstractShape span:nth-child(2) {
+  inset: 8px 18px 8px 12px;
+
+  transform: rotate(-5deg);
+}
+
+.abstractShape span:nth-child(3) {
+  inset: 0 35px 20px 0;
+
+  transform: rotate(12deg);
+}
+
+.body {
+  box-sizing: border-box;
+  min-width: 0;
+
+  padding: 20px;
+}
+
+.client {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #4d63ee;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.body h3 {
+  overflow-wrap: anywhere;
+
+  margin: 0 0 11px;
+
+  color: #182033;
+
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 750;
+
+  letter-spacing: -0.02em;
+}
+
+.body p {
+  overflow-wrap: anywhere;
+
+  min-height: 64px;
+
+  margin: 0 0 14px;
+
+  color: #68758e;
+
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.stats {
+  display: grid;
+  gap: 6px;
+
+  margin: 0 0 15px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.stats li {
+  position: relative;
+
+  padding-left: 13px;
+
+  color: #6e7c96;
+
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.stats li::before {
+  content: "";
+
+  position: absolute;
+
+  top: 5px;
+  left: 0;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #f35b7b;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tags span {
+  max-width: 100%;
+
+  overflow-wrap: anywhere;
+
+  padding: 5px 9px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      100deg,
+      rgba(75, 94, 255, 0.08),
+      rgba(101, 64, 211, 0.07)
+    );
+
+  color: #4b5ff1;
+
+  font-size: 9.5px;
+  font-weight: 650;
+}
+
+@media (max-width: 680px) {
+  .visual {
+    height: 180px;
+  }
+
+  .body {
+    padding: 18px;
+  }
+
+  .body p {
+    min-height: 0;
+  }
+}
+
+@media (min-width: 681px) and (max-width: 1024px) {
+  .body {
+    padding: 19px;
+  }
+
+  .body p {
+    min-height: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .visual {
+    height: 165px;
+  }
+}

@@ -1,0 +1,201 @@
+.page {
+  background: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.backgroundGlowOne,
+.backgroundGlowTwo {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(5px);
+}
+
+.backgroundGlowOne {
+  width: 320px;
+  height: 320px;
+  left: -230px;
+  top: 390px;
+  border: 1px solid rgba(71, 98, 253, 0.15);
+  background: rgba(71, 98, 253, 0.035);
+}
+
+.backgroundGlowTwo {
+  width: 380px;
+  height: 380px;
+  right: -280px;
+  top: 850px;
+  border: 1px solid rgba(246, 103, 128, 0.12);
+  background: rgba(246, 103, 128, 0.025);
+}
+
+.hero {
+  padding: clamp(4rem, 8vw, 6rem) 0;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #7d8cff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  transition: color 200ms ease;
+}
+
+.backLink:hover {
+  color: #aab4ff;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba(77, 98, 255, 0.12);
+  color: #5d71ff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+.updated {
+  color: #4b5a72;
+  font-size: 0.95rem;
+}
+
+.content {
+  padding: 0 0 clamp(4rem, 8vw, 6rem);
+}
+
+.content h2 {
+  color: #0f172a;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 2.5rem 0 0.75rem;
+}
+
+.content h2:first-of-type {
+  margin-top: 0;
+}
+
+.content p {
+  color: #4b5a72;
+  font-size: 1rem;
+  line-height: 1.9;
+  margin-bottom: 1rem;
+}
+
+.content strong {
+  color: #0f172a;
+}
+
+/* Responsive adjustments preserve the existing desktop appearance. */
+@media (max-width: 1199px) {
+  .container {
+    width: min(1180px, calc(100% - 32px));
+  }
+
+  .backgroundGlowOne {
+    left: -260px;
+  }
+
+  .backgroundGlowTwo {
+    right: -300px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: calc(100% - 32px);
+  }
+
+  .hero {
+    padding: clamp(3rem, 12vw, 4rem) 0;
+  }
+
+  .backLink {
+    margin-bottom: 1.5rem;
+  }
+
+  .badge {
+    max-width: 100%;
+    padding: 7px 14px;
+    font-size: 0.75rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 10vw, 2.4rem);
+    overflow-wrap: anywhere;
+  }
+
+  .content {
+    padding-bottom: 4rem;
+  }
+
+  .content h2 {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+
+  .content p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+
+  .backgroundGlowOne,
+  .backgroundGlowTwo {
+    max-width: 55vw;
+    max-height: 55vw;
+  }
+
+  .backgroundGlowOne {
+    left: -42vw;
+    top: 300px;
+  }
+
+  .backgroundGlowTwo {
+    right: -48vw;
+    top: 700px;
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  .hero {
+    padding-top: 2.5rem;
+  }
+
+  .badge {
+    gap: 6px;
+    padding-inline: 12px;
+  }
+}

@@ -1,0 +1,17 @@
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 8px 0 12px;
+}
+
+.stars svg {
+  font-size: 0.85rem;
+  color: #ffc83d;
+  filter: drop-shadow(0 0 8px rgba(255, 200, 61, 0.45));
+  transition: 0.3s ease;
+}
+
+.card:hover .stars svg {
+  transform: scale(1.08);
+}

@@ -1,0 +1,154 @@
+.carousel {
+  position: relative;
+  padding: 10px 0 65px;
+  overflow: hidden;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.carousel :global(.swiper-wrapper) {
+  align-items: stretch;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.carousel :global(.swiper-slide) {
+  height: auto;
+  display: flex;
+  min-width: 0;
+  max-width: 100%;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);
+  opacity: 0.72;
+  transform: scale(0.96);
+}
+
+.carousel :global(.swiper-slide-active) {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.carousel :global(.swiper-slide-prev),
+.carousel :global(.swiper-slide-next) {
+  opacity: 0.88;
+  transform: scale(0.98);
+}
+
+.carousel :global(.swiper-button-prev),
+.carousel :global(.swiper-button-next) {
+  width: 25px;
+  height: 25px;
+
+  border-radius: 50%;
+
+  background: #141922;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: #ff5c84;
+
+  transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
+  top: calc(100% - 18px);
+}
+
+.carousel :global(.swiper-button-prev) {
+  left: auto;
+  right: 60px;
+}
+
+.carousel :global(.swiper-button-next) {
+  right: 8px;
+}
+
+.carousel :global(.swiper-button-prev::after),
+.carousel :global(.swiper-button-next::after) {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.carousel :global(.swiper-navigation-icon) {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+  transform-origin: center;
+  fill: currentColor;
+  pointer-events: none;
+}
+
+.carousel :global(.swiper-button-prev:hover),
+.carousel :global(.swiper-button-next:hover) {
+  background: #ff5c84;
+  color: #fff;
+
+  box-shadow: 0 0 20px rgba(77, 98, 255, 0.35);
+}
+
+.carousel :global(.swiper-pagination) {
+  bottom: 6px;
+  text-align: left;
+}
+
+.carousel :global(.swiper-pagination-bullet) {
+  width: 7px;
+  height: 7px;
+
+  background: #ffffff;
+
+  opacity: 0.25;
+
+  transition: 0.35s;
+}
+
+.carousel :global(.swiper-pagination-bullet-active) {
+  width: 20px;
+
+  border-radius: 30px;
+
+  background: #ff5c84;
+
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .carousel :global(.swiper-slide) {
+    transform: scale(0.98);
+  }
+
+  .carousel :global(.swiper-slide-active) {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 767px) {
+  .carousel {
+    padding-bottom: 58px;
+  }
+
+  .carousel :global(.swiper-button-prev),
+  .carousel :global(.swiper-button-next) {
+    top: calc(100% - 16px);
+  }
+
+  .carousel :global(.swiper-button-prev) {
+    right: 51px;
+  }
+
+  .carousel :global(.swiper-button-next) {
+    right: 3px;
+  }
+
+  .carousel :global(.swiper-pagination) {
+    right: 58px;
+    width: auto;
+    max-width: calc(100% - 58px);
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 1440px) {
+  .carousel {
+    max-width: 100%;
+  }
+}

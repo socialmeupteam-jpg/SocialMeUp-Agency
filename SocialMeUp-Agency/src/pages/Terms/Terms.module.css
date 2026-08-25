@@ -1,0 +1,180 @@
+.page {
+  background: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.backgroundGlowOne,
+.backgroundGlowTwo {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(5px);
+}
+
+.backgroundGlowOne {
+  width: 320px;
+  height: 320px;
+  left: -230px;
+  top: 390px;
+  border: 1px solid rgba(71, 98, 253, 0.15);
+  background: rgba(71, 98, 253, 0.035);
+}
+
+.backgroundGlowTwo {
+  width: 380px;
+  height: 380px;
+  right: -280px;
+  top: 850px;
+  border: 1px solid rgba(246, 103, 128, 0.12);
+  background: rgba(246, 103, 128, 0.025);
+}
+
+
+.hero {
+  padding: clamp(4rem, 8vw, 6rem) 0;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #7d8cff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  transition: color 200ms ease;
+}
+
+.backLink:hover {
+  color: #aab4ff;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba(77, 98, 255, 0.12);
+  color: #5d71ff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+.updated {
+  color: #4b5a72;
+  font-size: 0.95rem;
+}
+
+.content {
+  padding: 0 0 clamp(4rem, 8vw, 6rem);
+}
+
+.content h2 {
+  color: #0f172a;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 2.5rem 0 0.75rem;
+}
+
+.content h2:first-of-type {
+  margin-top: 0;
+}
+
+.content p {
+  color: #4b5a72;
+  font-size: 1rem;
+  line-height: 1.9;
+  margin-bottom: 1rem;
+}
+
+.content strong {
+  color: #0f172a;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: min(100% - 32px, 1180px);
+  }
+
+  .hero {
+    padding: 3rem 0 3.5rem;
+  }
+
+  .backLink {
+    margin-bottom: 1.5rem;
+  }
+
+  .badge {
+    max-width: 100%;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+    overflow-wrap: anywhere;
+  }
+
+  .content {
+    padding-bottom: 3.5rem;
+  }
+
+  .content h2 {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+
+  .content p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+
+  .backgroundGlowOne {
+    left: -280px;
+  }
+
+  .backgroundGlowTwo {
+    right: -330px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    width: min(100% - 48px, 1180px);
+  }
+
+  .hero {
+    padding: clamp(3.5rem, 7vw, 5rem) 0;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    width: min(1180px, calc(100% - 64px));
+  }
+}

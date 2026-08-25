@@ -1,81 +1,157 @@
-import { useState } from "react";
-import { FiMenu, FiX } from "react-icons/fi";
+import { useEffect, useState } from "react";
+import { FiMenu, FiX, FiArrowLeft } from "react-icons/fi";
+import { Link, useLocation } from "react-router-dom";
 
 import styles from "./Navbar.module.css";
 
 const navigationLinks = [
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
-  { label: "Work", href: "#work" },
   { label: "Blog", href: "#blog" },
-  { label: "Careers", href: "#careers" },
+  { label: "Portfolio", href: "/portfolio" },
   { label: "Contact", href: "#contact" },
-  { label: "Academy", href: "#academy" },
+  { label: "Academy", href: "https://socialmeupacademy.in/" },
 ];
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
   const handleMenuToggle = () => {
     setIsMenuOpen((previousState) => !previousState);
   };
 
-  const handleNavigation = () => {
-    setIsMenuOpen(false);
+  // Handles normal navigation links
+  const handleNavigation = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    // External links
+    if (href.startsWith("http")) {
+      return;
+    }
+
+    // Portfolio route
+    if (href === "/portfolio") {
+      return;
+    }
+
+    // Section links
+    if (href.startsWith("#")) {
+      event.preventDefault();
+
+      // If already on homepage, scroll directly
+      if (location.pathname === "/") {
+        const section = document.querySelector(href);
+
+        if (section) {
+          section.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+
+        setIsMenuOpen(false);
+        return;
+      }
+
+      // If on another page, go to homepage first
+      window.location.href = `/${href}`;
+    }
   };
+
+  // Calendly should ONLY be used for the consultation button
+  const handleBookConsultation = () => {
+    window.open(
+      "https://calendly.com/prashantsocialmeup/30min",
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location.pathname]);
 
   return (
     <header className={styles.navbar}>
       <div className={styles.navbarContainer}>
-        <a
-          href="/"
+        {/* Logo */}
+        <Link
+          to="/"
           className={styles.logo}
           aria-label="SocialMeUp home"
         >
           <span className={styles.logoMark} aria-hidden="true">
-            <img src="/Logo.png" alt="SocialMeUp-logo" className="logo" />
+            <img
+              src="/Logo-2.png"
+              alt="SocialMeUp-logo"
+              className="logo"
+            />
           </span>
 
           <span className={styles.logoText}>
             Social<span>Me</span>Up
           </span>
-        </a>
+        </Link>
 
-        <nav
-          className={`${styles.navigation} ${
-            isMenuOpen ? styles.navigationOpen : ""
-          }`}
-          aria-label="Main navigation"
-        >
-          {navigationLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className={styles.navigationLink}
-              onClick={handleNavigation}
+        {isHome ? (
+          <>
+            {/* Navigation */}
+            <nav
+              id="main-navigation"
+              className={`${styles.navigation} ${
+                isMenuOpen ? styles.navigationOpen : ""
+              }`}
+              aria-label="Main navigation"
             >
-              {link.label}
-            </a>
-          ))}
+              {navigationLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className={styles.navigationLink}
+                  onClick={(event) =>
+                    handleNavigation(event, link.href)
+                  }
+                >
+                  {link.label}
+                </a>
+              ))}
 
-          <a
-            href="#consultation"
-            className={styles.consultationButton}
-            onClick={handleNavigation}
-          >
-            Free Consultation
-          </a>
-        </nav>
+              {/* Consultation Button */}
+              <button
+                type="button"
+                className={styles.consultationButton}
+                onClick={handleBookConsultation}
+              >
+                Book free Consultation
+              </button>
+            </nav>
 
-        <button
-          type="button"
-          className={styles.menuButton}
-          onClick={handleMenuToggle}
-          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
-          aria-expanded={isMenuOpen}
-        >
-          {isMenuOpen ? <FiX /> : <FiMenu />}
-        </button>
+            {/* Mobile Menu Button */}
+            <button
+              type="button"
+              className={styles.menuButton}
+              onClick={handleMenuToggle}
+              aria-label={
+                isMenuOpen
+                  ? "Close navigation menu"
+                  : "Open navigation menu"
+              }
+              aria-expanded={isMenuOpen}
+              aria-controls="main-navigation"
+            >
+              {isMenuOpen ? <FiX /> : <FiMenu />}
+            </button>
+          </>
+        ) : (
+          <Link to="/" className={styles.backHomeButton}>
+            <FiArrowLeft />
+            Back to Home
+          </Link>
+        )}
       </div>
     </header>
   );
