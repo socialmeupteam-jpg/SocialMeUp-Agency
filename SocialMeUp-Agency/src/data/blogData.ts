@@ -333,7 +333,7 @@ export const blogPosts: BlogPost[] = [
             "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&q=85",
 
         content: [
-            "Artificial Intelligence (AI) is transforming industries and reshaping the way we interact with technology. From intelligent chatbots and recommendation systems to computer vision and automated decision-making, AI is becoming an important part of modern digital solutions.",
+            "Artificial Intelligence (AI) is transforming industries and reshaping the way we interact with technology. From intelligent chatbot and recommendation systems to computer vision and automated decision-making, AI is becoming an important part of modern digital solutions.",
 
             "But how does AI actually work, and what is involved in creating your own AI system? Building an AI solution requires more than simply selecting a model. It involves understanding the problem, collecting and preparing quality data, selecting the right tools and models, training and evaluating the system, and continuously monitoring its performance.",
 
@@ -359,7 +359,7 @@ export const blogPosts: BlogPost[] = [
                 title: "Key Concepts in AI",
 
                 content:
-                    "Understanding the core concepts behind AI is essential before building an AI system. Machine Learning allows algorithms to learn from data and improve their performance without requiring every rule to be explicitly programmed. Deep Learning is a subset of machine learning that uses multi-layered neural networks to identify complex patterns in large datasets. Natural Language Processing and Natural Language Generation enable machines to understand, process, and generate human language, powering applications such as chatbots, virtual assistants, and AI writing tools."
+                    "Understanding the core concepts behind AI is essential before building an AI system. Machine Learning allows algorithms to learn from data and improve their performance without requiring every rule to be explicitly programmed. Deep Learning is a subset of machine learning that uses multi-layered neural networks to identify complex patterns in large datasets. Natural Language Processing and Natural Language Generation enable machines to understand, process, and generate human language, powering applications such as chatbot, virtual assistants, and AI writing tools."
             },
 
             {
@@ -449,7 +449,7 @@ export const blogPosts: BlogPost[] = [
                 title: "Monitor and Update Regularly",
 
                 content:
-                    "Deploying an AI model is not the end of the development process. AI systems need continuous monitoring to ensure that their performance remains reliable as real-world data changes. Developers should track performance, identify unexpected behaviour, retrain models when necessary, and update the system as requirements and data evolve."
+                    "Deploying an AI model is not the end of the development process. AI systems need continuous monitoring to ensure that their performance remains reliable as real-world data changes. Developers should track performance, identify unexpected behavior, retrain models when necessary, and update the system as requirements and data evolve."
             },
 
             {

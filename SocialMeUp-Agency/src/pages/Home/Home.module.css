@@ -31,8 +31,6 @@ html {
   }
 }
 
-/* Keep the existing desktop layout while preventing viewport overflow at
-   common responsive breakpoints. */
 @media (max-width: 1199px) {
   .homePage {
     width: 100%;

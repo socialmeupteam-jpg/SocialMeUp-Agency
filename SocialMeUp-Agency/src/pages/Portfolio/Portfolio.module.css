@@ -110,8 +110,6 @@
   line-height: 1.65;
 }
 
-/* FILTERS */
-
 .filterSection {
   position: relative;
   z-index: 2;
@@ -179,8 +177,6 @@
   color: #ffffff;
 }
 
-/* STATS */
-
 .statsGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -227,8 +223,6 @@
   font-size: 11px;
   line-height: 1.4;
 }
-
-/* PORTFOLIO */
 
 .portfolioSection {
   position: relative;

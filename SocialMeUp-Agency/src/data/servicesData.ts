@@ -1,9 +1,5 @@
 import type { ElementType } from "react";
 
-/* =========================================================
-   SERVICE MENU DATA
-========================================================= */
-
 export interface ServiceItem {
   slug: string;
   title: string;
@@ -86,10 +82,6 @@ export const services: ServiceItem[] = [
   },
 ];
 
-/* =========================================================
-   SERVICE TYPES
-========================================================= */
-
 export interface ServiceStat {
   value: string;
   label: string;
@@ -146,10 +138,6 @@ export interface ServiceData {
   contactImage?: string;
 }
 
-/* =========================================================
-   COMMON STATS
-========================================================= */
-
 const defaultStats: ServiceStat[] = [
   {
     value: "500+",
@@ -169,14 +157,9 @@ const defaultStats: ServiceStat[] = [
   },
 ];
 
-/* =========================================================
-   COMPLETE SERVICE DATA
-========================================================= */
 
 export const servicesData: Record<string, ServiceData> = {
-  /* =======================================================
-     DIGITAL MARKETING
-  ======================================================= */
+  /* DIGITAL MARKETING */
 
   digitalMarketing: {
     slug: "digital-marketing",
@@ -278,9 +261,7 @@ export const servicesData: Record<string, ServiceData> = {
       "/assets/services/digital-marketing/digital-marketing-contact.png",
   },
 
-  /* =======================================================
-     WEBSITE DEVELOPMENT
-  ======================================================= */
+  /* WEBSITE DEVELOPMENT */
 
   websiteDevelopment: {
     slug: "website-development",
@@ -362,9 +343,7 @@ export const servicesData: Record<string, ServiceData> = {
       "/assets/services/website-development/website-development-contact.png",
   },
 
-  /* =======================================================
-     BLUE TICK VERIFICATION
-  ======================================================= */
+  /* BLUE TICK VERIFICATION */
 
   blueTickVerification: {
     slug: "blue-tick-verification",
@@ -476,9 +455,7 @@ export const servicesData: Record<string, ServiceData> = {
       "/assets/services/blue-tick-verification/blue-tick-contact.png",
   },
 
-  /* =======================================================
-     OUTDOOR MARKETING
-  ======================================================= */
+  /* OUTDOOR MARKETING */
 
   outdoorMarketing: {
     slug: "outdoor-marketing",
@@ -636,9 +613,7 @@ export const servicesData: Record<string, ServiceData> = {
       "/assets/services/outdoor-marketing/outdoor-marketing-contact.png",
   },
 
-  /* =======================================================
-     APP DEVELOPMENT
-  ======================================================= */
+  /* APP DEVELOPMENT */
 
   appDevelopment: {
     slug: "app-development",
@@ -715,9 +690,7 @@ export const servicesData: Record<string, ServiceData> = {
       "/assets/services/app-development/app-development-contact.png",
   },
 
-  /* =======================================================
-     BUSINESS DIGITAL ROADMAP
-  ======================================================= */
+  /* BUSINESS DIGITAL ROADMAP */
 
   businessDigitalRoadmap: {
     slug: "business-digital-roadmap",
@@ -787,9 +760,7 @@ export const servicesData: Record<string, ServiceData> = {
       "/assets/services/business-digital-roadmap/business-roadmap-contact.png",
   },
 
-  /* =======================================================
-     PRODUCT MARKET RESEARCH
-  ======================================================= */
+  /* PRODUCT MARKET RESEARCH */
 
   productMarketResearch: {
     slug: "product-market-research",
@@ -866,9 +837,7 @@ export const servicesData: Record<string, ServiceData> = {
       "/assets/services/product-market-research/product-research-contact.png",
   },
 
-  /* =======================================================
-     MARKETING STRATEGY
-  ======================================================= */
+  /* MARKETING STRATEGY */
 
   marketingStrategy: {
     slug: "marketing-strategy",
@@ -946,12 +915,12 @@ export const servicesData: Record<string, ServiceData> = {
   },
 };
 
-/* =========================================================
+/* 
    SERVICE ROUTE DATA
    IMPORTANT:
    This file contains route information only.
    It does NOT import React page components.
-========================================================= */
+*/
 
 export interface ServiceRoute {
   path: string;
@@ -1000,9 +969,7 @@ export const serviceRoutes: ServiceRoute[] = [
   },
 ];
 
-/* =========================================================
-   HELPER FUNCTIONS
-========================================================= */
+/* HELPER FUNCTIONS */
 
 export const getServiceBySlug = (
   slug: string
