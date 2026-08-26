@@ -1,3 +1,6 @@
+import blog1 from "../assets/images/blog/Blog-1.webp";
+import blog2 from "../assets/images/blog/Blog-2.webp";
+import blog3 from "../assets/images/blog/Blog-3.webp";
 export interface BlogSection {
     number: string;
     title: string;
@@ -51,7 +54,7 @@ export const blogPosts: BlogPost[] = [
         readTime: "5 min read",
 
         image:
-            "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=1600&q=85",
+            blog1,
 
         content: [
             "In today's rapidly evolving business landscape, startups face numerous challenges. From limited budgets to fierce competition, establishing a strong market presence is crucial for survival and growth. In this scenario, digital marketing has emerged as one of the most reliable and cost-effective strategies for startups to build their brand, reach their target audience, and achieve sustainable growth.",
@@ -124,7 +127,7 @@ export const blogPosts: BlogPost[] = [
                 readTime: "7 min read",
 
                 image:
-                    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+                    blog2
             },
 
             {
@@ -141,7 +144,7 @@ export const blogPosts: BlogPost[] = [
                 readTime: "9 min read",
 
                 image:
-                    "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"
+                    blog3
             }
         ]
     },
@@ -167,8 +170,7 @@ export const blogPosts: BlogPost[] = [
         readTime: "7 min read",
 
         image:
-            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=85",
-
+            blog2,
         content: [
             "In today's fast-paced digital world, digital marketing has emerged as one of the most sought-after career choices. With the rise of online businesses and increasing reliance on the internet for everyday activities, companies are investing heavily in digital strategies to reach and engage their audiences.",
 
@@ -287,7 +289,7 @@ export const blogPosts: BlogPost[] = [
                 readTime: "5 min read",
 
                 image:
-                    "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=800&q=80"
+                    blog1
             },
 
             {
@@ -304,7 +306,7 @@ export const blogPosts: BlogPost[] = [
                 readTime: "9 min read",
 
                 image:
-                    "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80"
+                    blog3
             }
         ]
     },
@@ -330,8 +332,7 @@ export const blogPosts: BlogPost[] = [
         readTime: "9 min read",
 
         image:
-            "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&q=85",
-
+            blog3,
         content: [
             "Artificial Intelligence (AI) is transforming industries and reshaping the way we interact with technology. From intelligent chatbot and recommendation systems to computer vision and automated decision-making, AI is becoming an important part of modern digital solutions.",
 
@@ -495,7 +496,7 @@ export const blogPosts: BlogPost[] = [
                 readTime: "5 min read",
 
                 image:
-                    "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=800&q=80"
+                    blog1
             },
 
             {
@@ -512,7 +513,7 @@ export const blogPosts: BlogPost[] = [
                 readTime: "7 min read",
 
                 image:
-                    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+                    blog2
             }
         ]
     }

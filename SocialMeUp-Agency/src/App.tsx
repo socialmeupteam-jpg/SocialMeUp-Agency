@@ -2,7 +2,6 @@ import { Navigate, Route, Routes } from "react-router-dom";
 
 import Home from "./pages/Home/Home";
 import Portfolio from "./pages/Portfolio/Portfolio";
-import ServicePage from "./pages/ServicesPage/ServicePage";
 import PrivacyPolicy from "./pages/Privacy/PrivacyPolicy";
 import Terms from "./pages/Terms/Terms";
 import BlogDetails from "./pages/BlogDetails/BlogDetails";
@@ -11,9 +10,7 @@ import ContactPage from "./pages/Contact/ContactPage";
 function App() {
   return (
     <Routes>
-      {/* =========================
-          MAIN WEBSITE ROUTES
-      ========================= */}
+      {/* MAIN WEBSITE ROUTES */}
 
       <Route path="/" element={<Home />} />
 
@@ -26,8 +23,6 @@ function App() {
       <Route path="/blog/:slug" element={<BlogDetails />} />
 
       <Route path="/contact" element={<ContactPage />} />
-
-      <Route path="/services" element={<ServicePage />} />
 
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

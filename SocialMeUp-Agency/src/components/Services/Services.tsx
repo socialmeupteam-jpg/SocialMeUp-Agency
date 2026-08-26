@@ -180,10 +180,6 @@ function ServiceCard({ service }: { service: Service }) {
             {expanded ? "Read Less" : "Read More"}
           </button>
         )}
-        <a href="/services" className={styles.serviceLink}>
-          Learn more
-          <FiArrowUpRight />
-        </a>
       </div>
     </motion.article>
   );

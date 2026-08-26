@@ -24,7 +24,6 @@ function Footer() {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.grid}>
-
           {/* Company */}
           <div className={styles.company}>
             <img src={logo} alt="SocialMeUp" />
@@ -117,8 +116,7 @@ function Footer() {
 
             <p>
               <b>Delhi Office:</b>
-              B, Mohan Cooperative Industrial Estate, Badarpur, New Delhi
-              110044
+              B, Mohan Cooperative Industrial Estate, Badarpur, New Delhi 110044
             </p>
 
             <p>
@@ -144,7 +142,7 @@ function Footer() {
 
             <iframe
               title="SocialMeUp Lucknow Office Location"
-              src="https://www.google.com/maps?q=Aurangabad+Jageer+KN+839+Bijnor+Rd+near+Manish+Yadav+Gate+Sarojini+Nagar+Lucknow+Uttar+Pradesh+226002+India&output=embed"
+              src="https://www.google.com/maps?q=Aurangabad+Jageer%2C+KN-839%2C+Bijnor+Rd%2C+near+Manish+Yadav+Gate%2C+Sarojini+Nagar%2C+Lucknow%2C+Uttar+Pradesh+226002%2C+India&z=16&output=embed"
               width="100%"
               height="260"
               style={{ border: 0 }}
@@ -158,8 +156,8 @@ function Footer() {
         {/* Bottom Footer */}
         <div className={styles.bottom}>
           <p>
-            &copy; 2016 SocialMeUp - Best Digital Marketing Company | All
-            Rights Reserved.
+            &copy; 2016 SocialMeUp - Best Digital Marketing Company | All Rights
+            Reserved.
           </p>
 
           <div>
