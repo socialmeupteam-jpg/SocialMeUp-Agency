@@ -97,14 +97,14 @@ function About() {
                 <div className={styles.badgeContent}>
                   <div className={styles.badgeLogo}>
                     <img
-                      src="/Logo.png"
+                      src="/Logo-2.png"
                       alt="SocialMeUp Logo"
                       className={styles.badgeLogoImage}
                     />
                   </div>
                   <div className={styles.badgeText}>
                     <h4>Since 2021</h4>
-                    <p>Trusted by 50+ Clients</p>
+                    <p>Trusted by 20+ Clients</p>
                   </div>
                 </div>
               </div>
@@ -121,7 +121,7 @@ function About() {
               <div className={styles.statCard}>
                 <FiUsers />
                 <strong>Expert Team</strong>
-                <span>50+ Skilled Professionals</span>
+                <span>20+ Skilled Professionals</span>
               </div>
 
               <div className={styles.statCard}>

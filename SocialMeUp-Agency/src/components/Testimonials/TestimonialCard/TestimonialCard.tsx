@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
 import { FaGoogle } from "react-icons/fa";
-import { FiArrowRight } from "react-icons/fi";
-
 import StarRating from "../StarRating/StarRating";
 import styles from "./TestimonialCard.module.css";
 
@@ -33,7 +31,7 @@ function TestimonialCard({ testimonial }: TestimonialCardProps) {
       </div>
 
       <div className={styles.profile}>
-        <img src={testimonial.avatar} alt={testimonial.name} loading="lazy" />
+
 
         <div>
           <h3>{testimonial.name}</h3>

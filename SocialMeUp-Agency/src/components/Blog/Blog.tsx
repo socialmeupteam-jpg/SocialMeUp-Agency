@@ -70,6 +70,7 @@ function Blog() {
               <BlogCard
                 post={{
                   ...post,
+                  id: Number(post.id),
                   description: `Discover digital marketing insights and growth strategies in ${post.title}.`,
                 }}
               />

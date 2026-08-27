@@ -62,6 +62,30 @@ function Navbar() {
     }
   };
 
+  // Handles logo navigation to Hero section
+  const handleLogoClick = (
+    event: React.MouseEvent<HTMLAnchorElement>
+  ) => {
+    event.preventDefault();
+
+    // If already on homepage, smoothly scroll to Hero
+    if (location.pathname === "/") {
+      const heroSection = document.querySelector("#hero");
+
+      if (heroSection) {
+        heroSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+
+      return;
+    }
+
+    // If on another page, navigate to homepage Hero
+    window.location.href = "/#hero";
+  };
+
   // Calendly should ONLY be used for the consultation button
   const handleBookConsultation = () => {
     window.open(
@@ -79,23 +103,20 @@ function Navbar() {
     <header className={styles.navbar}>
       <div className={styles.navbarContainer}>
         {/* Logo */}
-        <Link
-          to="/"
+        <a
+          href="#hero"
           className={styles.logo}
           aria-label="SocialMeUp home"
+          onClick={handleLogoClick}
         >
           <span className={styles.logoMark} aria-hidden="true">
             <img
-              src="/Logo-2.png"
+              src="/Logo.png"
               alt="SocialMeUp-logo"
               className="logo"
             />
           </span>
-
-          <span className={styles.logoText}>
-            Social<span>Me</span>Up
-          </span>
-        </Link>
+        </a>
 
         {isHome ? (
           <>

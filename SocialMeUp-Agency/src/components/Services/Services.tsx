@@ -1,6 +1,5 @@
 import { useState } from "react";
 import {
-  FiArrowUpRight,
   FiBarChart2,
   FiCode,
   FiEdit3,
@@ -28,6 +27,14 @@ interface Service {
 const services: Service[] = [
   {
     number: "01",
+    title: "Performance Marketing",
+    description:
+      "Our Internet advertising services help businesses reach their target audience and increase their online visibility. We offer customized digital marketing solutions, including search engine optimization (SEO), pay-per-click (PPC) advertising, social media marketing, and email marketing.",
+    icon: <FiTarget />,
+  },
+
+  {
+    number: "02",
     title: "Digital Marketing",
     description:
       "Our Internet advertising services help businesses reach their target audience and increase their online visibility. We offer customized digital marketing solutions, including search engine optimization (SEO), pay-per-click (PPC) advertising, social media marketing, and email marketing.",
@@ -35,7 +42,7 @@ const services: Service[] = [
   },
 
   {
-    number: "02",
+    number: "03",
     title: "Website Development",
     description:
       "Our software development team specializes in creating high-quality web applications for businesses of all sizes. From front-end design to back-end development, we provide end-to-end web development services using the latest technologies and frameworks",
@@ -43,7 +50,7 @@ const services: Service[] = [
   },
 
   {
-    number: "03",
+    number: "04",
     title: "SEO",
     description:
       "Improve your search engine visibility through White Hat On-Page SEO, Off-Page SEO, Technical SEO, Local SEO, Keyword Research, Content Optimization and Link Building strategies that generate sustainable organic traffic.",
@@ -51,7 +58,7 @@ const services: Service[] = [
   },
 
   {
-    number: "04",
+    number: "05",
     title: "E-commerce Development",
     description:
       "Our e-commerce development solutions help businesses establish a strong online presence. We offer customized e-commerce services using popular platforms like Shopify, Magento and WooCommerce.",
@@ -59,7 +66,7 @@ const services: Service[] = [
   },
 
   {
-    number: "05",
+    number: "06",
     title: "Lead Generation",
     description:
       "Generate high-quality business leads through performance marketing, landing pages, Facebook Ads, Google Ads, LinkedIn campaigns, sales funnels and conversion optimization strategies.",
@@ -67,7 +74,7 @@ const services: Service[] = [
   },
 
   {
-    number: "06",
+    number: "07",
     title: "Social Media Marketing",
     description:
       "Build your brand across Instagram, Facebook, LinkedIn, Twitter and YouTube through creative content, paid campaigns, audience engagement, influencer collaborations and consistent brand communication.",
@@ -75,7 +82,7 @@ const services: Service[] = [
   },
 
   {
-    number: "07",
+    number: "08",
     title: "Business Consultancy",
     description:
       "Strategic business consulting to help organizations improve branding, marketing strategy, business growth, digital transformation, customer acquisition and revenue generation.",
@@ -83,7 +90,7 @@ const services: Service[] = [
   },
 
   {
-    number: "08",
+    number: "09",
     title: "WhatsApp Chatbot",
     description:
       "Automate customer communication using AI-powered WhatsApp chatbot for lead qualification, customer support, booking appointments, order tracking and instant response management.",
@@ -91,7 +98,7 @@ const services: Service[] = [
   },
 
   {
-    number: "09",
+    number: "10",
     title: "Influencer Marketing",
     description:
       "Connect your business with trusted influencer and content creators to improve brand awareness, reach new audiences and increase engagement through authentic collaborations.",
@@ -99,19 +106,11 @@ const services: Service[] = [
   },
 
   {
-    number: "10",
+    number: "11",
     title: "Video Marketing",
     description:
       "Increase your online visibility through professional promotional videos, reels, ad creatives, product showcases, corporate videos and social media video campaigns.",
     icon: <FiVideo />,
-  },
-
-  {
-    number: "11",
-    title: "Google Adwords",
-    description:
-      "Certified Google Ads management including Search Ads, Display Ads, Shopping Ads, YouTube Ads, Re-marketing campaigns and conversion tracking for maximum return on investment.",
-    icon: <FiTarget />,
   },
 
   {

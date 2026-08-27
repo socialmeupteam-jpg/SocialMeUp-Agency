@@ -39,9 +39,8 @@
   background: rgba(246, 103, 128, 0.025);
 }
 
-
 .hero {
-  padding: clamp(4rem, 8vw, 6rem) 0;
+  padding: clamp(4rem, 4vw, 6rem) 0;
   background: #ffffff;
   position: relative;
   overflow: hidden;

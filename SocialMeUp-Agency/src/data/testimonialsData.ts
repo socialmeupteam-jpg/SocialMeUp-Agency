@@ -1,15 +1,6 @@
-import preetAvatar from "../assets/images/testimonials/preet.jpg";
-import deepakAvatar from "../assets/images/testimonials/deepak.jpg";
-import gamingAvatar from "../assets/images/testimonials/gaming-howl.jpg";
-import anandAvatar from "../assets/images/testimonials/anand.jpg";
-import ranaAvatar from "../assets/images/testimonials/rana.jpg";
-import shivamAvatar from "../assets/images/testimonials/shivam.jpg";
-import ashishAvatar from "../assets/images/testimonials/ashish.jpg";
-import shreyaAvatar from "../assets/images/testimonials/shreya.jpg";
 export interface Testimonial {
     id: number;
     name: string;
-    avatar: string;
     review: string;
     rating: number;
     source: "Google";
@@ -20,7 +11,6 @@ export const testimonials: Testimonial[] = [
     {
         id: 1,
         name: "Preet",
-        avatar: preetAvatar,
         rating: 5,
         source: "Google",
         time: "1 year ago",
@@ -30,7 +20,6 @@ export const testimonials: Testimonial[] = [
     {
         id: 2,
         name: "Deepak Singh",
-        avatar: deepakAvatar,
         rating: 5,
         source: "Google",
         time: "1 year ago",
@@ -40,7 +29,6 @@ export const testimonials: Testimonial[] = [
     {
         id: 3,
         name: "GAMING HOWL",
-        avatar: gamingAvatar,
         rating: 5,
         source: "Google",
         time: "1 year ago",
@@ -50,7 +38,6 @@ export const testimonials: Testimonial[] = [
     {
         id: 4,
         name: "Anand Pratap",
-        avatar: anandAvatar,
         rating: 5,
         source: "Google",
         time: "1 year ago",
@@ -60,7 +47,6 @@ export const testimonials: Testimonial[] = [
     {
         id: 5,
         name: "Rana Singh",
-        avatar: ranaAvatar,
         rating: 5,
         source: "Google",
         time: "1 year ago",
@@ -70,7 +56,6 @@ export const testimonials: Testimonial[] = [
     {
         id: 6,
         name: "SHIVAM OMAR",
-        avatar: shivamAvatar,
         rating: 5,
         source: "Google",
         time: "1 year ago",
@@ -80,7 +65,6 @@ export const testimonials: Testimonial[] = [
     {
         id: 7,
         name: "Ashish Shukla",
-        avatar: ashishAvatar,
         rating: 5,
         source: "Google",
         time: "1 year ago",
@@ -90,7 +74,6 @@ export const testimonials: Testimonial[] = [
     {
         id: 8,
         name: "Shreya Singh",
-        avatar: shreyaAvatar,
         rating: 5,
         source: "Google",
         time: "1 year ago",

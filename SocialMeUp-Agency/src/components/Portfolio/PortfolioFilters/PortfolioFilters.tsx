@@ -1,5 +1,4 @@
 import {
-  FiCode,
   FiGlobe,
   FiImage,
   FiPlayCircle,
@@ -42,10 +41,7 @@ const filters: {
     label: "Social Media",
     icon: <FiTrendingUp />,
   },
-  {
-    label: "E-commerce",
-    icon: <FiCode />,
-  },
+
 ];
 
 function PortfolioFilters({

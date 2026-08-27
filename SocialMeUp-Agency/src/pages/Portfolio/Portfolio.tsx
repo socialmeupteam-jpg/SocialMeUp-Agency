@@ -1,14 +1,11 @@
 import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
 import PortfolioHero from "../../components/Portfolio/PortfolioHero/PortfolioHero";
 import PortfolioFilters, {
   type PortfolioFilter,
 } from "../../components/Portfolio/PortfolioFilters/PortfolioFilters";
-
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
-import PortfolioStats from "../../components/Portfolio/PortfolioStats/PortfolioStats";
 import PortfolioSection from "../../components/Portfolio/PortfolioSection/PortfolioSection";
 import PortfolioCTA from "../../components/Portfolio/PortfolioCTA/PortfolioCTA";
 
@@ -46,8 +43,6 @@ function Portfolio() {
               activeFilter={activeFilter}
               onFilterChange={setActiveFilter}
             />
-
-            <PortfolioStats />
           </section>
 
           <section className={styles.projects}>

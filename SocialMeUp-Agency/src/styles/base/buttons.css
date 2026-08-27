@@ -10,7 +10,10 @@
   font-size: 0.875rem;
   text-decoration: none;
   cursor: pointer;
-  transition: transform 200ms ease, background-color 200ms ease, border-color 200ms ease;
+  transition:
+    transform 200ms ease,
+    background-color 200ms ease,
+    border-color 200ms ease;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -61,4 +64,3 @@
     transition: none;
   }
 }
-

@@ -42,6 +42,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
+                className={`${styles.socialIcon} ${styles.facebook}`}
               >
                 <FaFacebookF />
               </a>
@@ -51,6 +52,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
+                className={`${styles.socialIcon} ${styles.instagram}`}
               >
                 <FaInstagram />
               </a>
@@ -60,6 +62,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
+                className={`${styles.socialIcon} ${styles.linkedin}`}
               >
                 <FaLinkedinIn />
               </a>
@@ -69,6 +72,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube"
+                className={`${styles.socialIcon} ${styles.youtube}`}
               >
                 <FaYoutube />
               </a>
@@ -156,8 +160,8 @@ function Footer() {
         {/* Bottom Footer */}
         <div className={styles.bottom}>
           <p>
-            &copy; 2016 SocialMeUp - Best Digital Marketing Company | All Rights
-            Reserved.
+            &copy; 2021-2026 SocialMeUp - Best Digital Marketing Company | All
+            Rights Reserved.
           </p>
 
           <div>

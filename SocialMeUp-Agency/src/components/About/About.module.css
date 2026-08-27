@@ -63,7 +63,6 @@
   align-items: center;
   gap: 0.6rem;
   width: fit-content;
-  margin-bottom: 2.5rem;
   padding: 8px 18px;
   border-radius: 999px;
   background: rgba(77, 98, 255, 0.12);
@@ -270,7 +269,7 @@
 .badgeLogoImage {
   width: 34px;
   height: 34px;
-  object-fit: cover;
+  object-fit: fill;
   border-radius: 50%;
   display: block;
 }

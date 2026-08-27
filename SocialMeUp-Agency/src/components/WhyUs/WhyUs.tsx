@@ -15,15 +15,15 @@ interface Feature {
 
 const stats: Stat[] = [
   {
-    value: "500+",
+    value: "100+",
     label: "Projects Delivered",
   },
   {
-    value: "50+",
+    value: "20+",
     label: "Active Clients",
   },
   {
-    value: "5+",
+    value: "7+",
     label: "Years of Excellence",
   },
 ];
@@ -32,12 +32,12 @@ const features: Feature[] = [
   {
     title: "Proven Track Record",
     description:
-      "5+ years delivering measurable results for 50+ clients across diverse industries.",
+      "7+ years delivering measurable results for 20+ clients across diverse industries.",
   },
   {
     title: "Expert Team",
     description:
-      "50+ skilled professionals across SEO, design, development, and marketing.",
+      "20+ skilled professionals across SEO, design, development, and marketing.",
   },
   {
     title: "Custom Strategy",
@@ -109,10 +109,7 @@ function WhyUs() {
               <span>Promise.</span> We Deliver.
             </motion.h2>
 
-            <motion.div
-              variants={staggerContainer}
-              className={styles.stats}
-            >
+            <motion.div variants={staggerContainer} className={styles.stats}>
               {stats.map((stat) => (
                 <motion.div
                   variants={fadeUp}
@@ -169,4 +166,3 @@ function WhyUs() {
 }
 
 export default WhyUs;
-

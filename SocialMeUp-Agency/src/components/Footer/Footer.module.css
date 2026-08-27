@@ -7,9 +7,7 @@
   overflow: hidden;
 }
 
-/* =========================
-   CONTAINER
-========================= */
+/* CONTAINER */
 
 .container {
   width: min(1700px, calc(100% - 48px));
@@ -18,9 +16,7 @@
   z-index: 2;
 }
 
-/* =========================
-   MAIN FOOTER GRID
-========================= */
+/* MAIN FOOTER GRID */
 
 .grid {
   display: grid;
@@ -40,9 +36,7 @@
   min-width: 0;
 }
 
-/* =========================
-   COMPANY SECTION
-========================= */
+/* COMPANY SECTION */
 
 .company {
   min-width: 0;
@@ -50,7 +44,7 @@
 
 .company img {
   display: block;
-  width: 250px;
+  width: 180px;
   max-width: 100%;
   height: auto;
   margin-bottom: 18px;
@@ -65,9 +59,7 @@
   overflow-wrap: anywhere;
 }
 
-/* =========================
-   HEADINGS
-========================= */
+/* HEADINGS */
 
 .footer h4 {
   color: #fff;
@@ -89,9 +81,7 @@
   background: linear-gradient(90deg, #ff5271, #4d62ff);
 }
 
-/* =========================
-   LINKS
-========================= */
+/* LINKS */
 
 .footer ul {
   padding: 0;
@@ -132,9 +122,7 @@
   width: 100%;
 }
 
-/* =========================
-   SOCIAL ICONS
-========================= */
+/*SOCIAL ICONS*/
 
 .socials {
   display: flex;
@@ -164,15 +152,41 @@
     box-shadow 0.35s ease;
 }
 
-.socials a:hover {
-  background: #ff5271;
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(255, 82, 113, 0.35);
+/* Facebook */
+.socials a.facebook:hover {
+  color: #1877f2;
+  background: rgba(24, 119, 242, 0.12);
+  transform: translateY(-2px);
 }
 
-/* =========================
-   CONTACT
-========================= */
+/* Instagram */
+.socials a.instagram:hover {
+  color: #ffffff;
+  background: linear-gradient(
+    45deg,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+  );
+  transform: translateY(-2px);
+}
+
+/* LinkedIn */
+.socials a.linkedin:hover {
+  color: #ffffff;
+  background: #0a66c2;
+  transform: translateY(-2px);
+}
+
+/* YouTube */
+.socials a.youtube:hover {
+  color: #ffffff;
+  background: #ff0000;
+  transform: translateY(-2px);
+}
+/* CONTACT */
 
 .contact {
   min-width: 0;
@@ -196,9 +210,7 @@
   margin-bottom: 2px;
 }
 
-/* =========================
-   MAP
-========================= */
+/* MAP */
 
 .map {
   width: 100%;
@@ -225,9 +237,7 @@
   filter: grayscale(0) contrast(1);
 }
 
-/* =========================
-   BOTTOM FOOTER
-========================= */
+/* BOTTOM FOOTER */
 
 .bottom {
   padding-top: 20px;
@@ -271,9 +281,7 @@
   white-space: nowrap;
 }
 
-/* =========================
-   BACK TO TOP BUTTON
-========================= */
+/* BACK TO TOP BUTTON */
 
 .topButton {
   width: 42px;
@@ -313,10 +321,8 @@
   font-size: 0.9rem;
 }
 
-/* =========================================================
-   LARGE LAPTOP / SMALL DESKTOP
-   1200px
-========================================================= */
+/* LARGE LAPTOP / SMALL DESKTOP
+   1200px */
 
 @media (max-width: 1200px) {
   .container {
@@ -341,10 +347,8 @@
   }
 }
 
-/* =========================================================
-   TABLETS / SMALL LAPTOPS
-   1024px
-========================================================= */
+/* TABLETS / SMALL LAPTOPS
+   1024px */
 
 @media (max-width: 1024px) {
   .footer {
@@ -381,10 +385,8 @@
   }
 }
 
-/* =========================================================
-   TABLETS
-   768px
-========================================================= */
+/* TABLETS
+   768px */
 
 @media (max-width: 768px) {
   .footer {
@@ -443,10 +445,8 @@
   }
 }
 
-/* =========================================================
-   LARGE MOBILE
-   600px
-========================================================= */
+/* LARGE MOBILE
+   600px */
 
 @media (max-width: 600px) {
   .footer {
@@ -522,10 +522,8 @@
   }
 }
 
-/* =========================================================
-   SMALL MOBILE
-   480px
-========================================================= */
+/* SMALL MOBILE
+   480px */
 
 @media (max-width: 480px) {
   .footer {
@@ -609,10 +607,8 @@
   }
 }
 
-/* =========================================================
-   VERY SMALL PHONES
-   360px
-========================================================= */
+/* VERY SMALL PHONES
+   360px */
 
 @media (max-width: 360px) {
   .footer {

@@ -4,6 +4,17 @@ import careerGuruEducationImage from "/portfolio/websites/career-guru-education.
 import socialmeupAcademyImage from "/portfolio/websites/socialmeup-academy.webp";
 import zomeStaysImage from "/portfolio/logos/zome-stays.webp";
 import threadFusionImage from "/portfolio/logos/thread-fusion.webp";
+import Reel1Image from "/portfolio/Reels/Reel-1.webp";
+import Reel2Image from "/portfolio/Reels/Reel-2.webp";
+import Reel3Image from "/portfolio/Reels/Reel-3.webp";
+import Reel4Image from "/portfolio/Reels/Reel-4.webp";
+import Reel5Image from "/portfolio/Reels/Reel-5.webp";
+import Reel6Image from "/portfolio/Reels/Reel-6.webp";
+import project1Image from "/portfolio/SocialMedia/project-1.webp";
+import project2Image from "/portfolio/SocialMedia/project-2.webp";
+import project3Image from "/portfolio/SocialMedia/project-3.webp";
+import project4Image from "/portfolio/SocialMedia/project-4.webp";
+
 
 export type PortfolioCategory =
   | "Websites"
@@ -29,7 +40,9 @@ export interface PortfolioStat {
 }
 
 export const portfolioProjects: PortfolioProject[] = [
-   {
+
+  //Websites
+  {
     id: 1,
     category: "Websites",
     client: "SURYA EYE CARE",
@@ -113,106 +126,259 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
   },
 
+  // Logos
 
   {
     id: 5,
     category: "Logos",
-    client: "Zome Stays",
-    title: "Startup Logo",
+    client: "ZOME STAYS",
+    title: "Hospitality Brand Logo",
     description:
-      "A clean and scalable logo identity designed for a modern technology startup.",
+      "A distinctive logo identity designed for Zome Stays to create a memorable and recognizable visual presence for its hospitality brand.",
     image: zomeStaysImage,
     link: "#",
     stats: [
-      "Multiple concepts",
-      "Logo variations",
-      "Brand guidelines",
+      "Hospitality-focused identity",
+      "Distinctive visual concept",
+      "Scalable logo design",
     ],
-    technologies: ["Logo Design", "Branding", "Guidelines"],
+    technologies: [
+      "Logo Design",
+      "Brand Identity",
+      "Visual Design",
+    ],
   },
 
   {
     id: 6,
     category: "Logos",
-    client: "Thread Fusion",
-    title: "Startup Logo",
+    client: "THREAD FUSION",
+    title: "Fashion Brand Logo",
     description:
-      "A clean and scalable logo identity designed for a modern technology startup.",
+      "A clean and memorable logo identity created for Thread Fusion, combining a modern visual approach with a strong fashion and apparel brand personality.",
     image: threadFusionImage,
     link: "#",
     stats: [
-      "Multiple concepts",
-      "Logo variations",
-      "Brand guidelines",
+      "Fashion-focused identity",
+      "Minimal logo concept",
+      "Brand-ready design",
     ],
-    technologies: ["Logo Design", "Branding", "Guidelines"],
+    technologies: [
+      "Logo Design",
+      "Branding",
+      "Visual Identity",
+    ],
   },
+
+
+  // Reels & Videos
+
   {
     id: 7,
     category: "Reels & Videos",
-    client: "YOUR CLIENT",
-    title: "Instagram Reel Campaign",
+    client: "SUNROOF TECHNO",
+    title: "Technology Brand Reel",
     description:
-      "Short-form video content designed to increase reach, engagement and brand awareness.",
-    image: "/portfolio/reels/reel-1.webp",
-    link: "https://www.instagram.com/reel/YOUR_REEL_ID/",
+      "Short-form promotional content created for Sunroof Techno with engaging visuals, dynamic editing and a social-first presentation.",
+    image: Reel1Image,
+    link: "https://www.instagram.com/reel/DcgN3hoijTX/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
     stats: [
-      "Short-form content",
-      "High-retention editing",
-      "Social media optimized",
+      "Technology-focused content",
+      "Dynamic short-form editing",
+      "Social-first presentation",
     ],
-    technologies: ["Reels", "Video Editing", "Motion"],
+    technologies: [
+      "Reels",
+      "Video Editing",
+      "Motion Graphics",
+    ],
   },
 
   {
     id: 8,
     category: "Reels & Videos",
-    client: "YOUR CLIENT",
-    title: "Product Reel",
+    client: "BN BAIJAL",
+    title: "Product Promotional Reel",
     description:
-      "Creative product-focused reel designed to communicate the product's value through engaging visuals.",
-    image: "/portfolio/reels/reel-2.webp",
-    link: "https://www.instagram.com/reel/YOUR_REEL_ID/",
+      "A product-focused reel designed to present the offering through engaging visuals, concise storytelling and attention-grabbing motion.",
+    image: Reel2Image,
+    link: "https://www.instagram.com/reel/DLXTLL2B9cK/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
     stats: [
-      "Product storytelling",
-      "Motion graphics",
-      "Engagement focused",
+      "Product-focused storytelling",
+      "Visual motion design",
+      "Social media optimized",
     ],
-    technologies: ["Video", "Reels", "Content Strategy"],
+    technologies: [
+      "Product Video",
+      "Reels",
+      "Motion Graphics",
+    ],
   },
 
   {
     id: 9,
-    category: "Social Media",
-    client: "YOUR CLIENT",
-    title: "Social Media Campaign",
+    category: "Reels & Videos",
+    client: "ZOME STAYS",
+    title: "Client Testimonial Reel",
     description:
-      "A complete social media creative campaign combining strategy, visual design and audience engagement.",
-    image: "/portfolio/social-media/social-1.webp",
-    link: "https://www.instagram.com/YOUR_ACCOUNT/",
+      "A testimonial-focused short-form video created to communicate the client experience in an engaging and authentic social media format.",
+    image: Reel3Image,
+    link: "https://www.instagram.com/reel/DcbESvHjLn1/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
     stats: [
-      "Creative campaign",
-      "Content strategy",
-      "Audience engagement",
+      "Testimonial storytelling",
+      "Short-form editing",
+      "Trust-building content",
     ],
-    technologies: ["Instagram", "Strategy", "Content"],
+    technologies: [
+      "Reels",
+      "Video Editing",
+      "Storytelling",
+    ],
   },
 
   {
     id: 10,
-    category: "Social Media",
-    client: "YOUR CLIENT",
-    title: "Instagram Creative",
+    category: "Reels & Videos",
+    client: "SOCIALMEUP AGENCY",
+    title: "Product Promotional Reel",
     description:
-      "A visually engaging social media creative designed to communicate the brand message effectively.",
-    image: "/portfolio/social-media/social-2.webp",
-    link: "https://www.instagram.com/YOUR_ACCOUNT/",
+      "Creative promotional video content produced for social media, combining product-focused visuals, editing and motion to create an engaging short-form experience.",
+    image: Reel4Image,
+    link: "https://www.instagram.com/reel/DcCto1_EdQm/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
     stats: [
-      "Social creative",
-      "Brand consistency",
-      "Engagement focused",
+      "Product-focused creative",
+      "Motion-led editing",
+      "Social media content",
     ],
-    technologies: ["Social Media", "Creative", "Branding"],
+    technologies: [
+      "Video Editing",
+      "Reels",
+      "Motion Graphics",
+    ],
+  },
+
+  {
+    id: 11,
+    category: "Reels & Videos",
+    client: "SOCIALMEUP ACADEMY",
+    title: "Influencer Shoot",
+    description:
+      "Influencer-led short-form content created to showcase a product or brand through authentic presentation, engaging visuals and social-first editing.",
+    image: Reel5Image,
+    link: "https://www.instagram.com/reel/DXcD-YVz23R/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
+    stats: [
+      "Influencer-led content",
+      "Brand-focused storytelling",
+      "Social-first editing",
+    ],
+    technologies: [
+      "Influencer Content",
+      "Video Editing",
+      "Reels",
+    ],
+  }, {
+    id: 12,
+    category: "Reels & Videos",
+    client: "SUNROOF TECHNO",
+    title: "Brand Promotional Reel",
+    description:
+      "A social media promotional reel created for Sunroof Techno to present its brand and energy solutions through engaging visuals and short-form storytelling.",
+    image: Reel6Image,
+    link: "https://www.instagram.com/reel/DcCJGTHznx7/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
+    stats: [
+      "Brand promotional content",
+      "Short-form storytelling",
+    ],
+    technologies: [
+      "Reels",
+      "Video Editing",
+    ],
+  },
+
+  // Social Media
+
+  {
+    id: 13,
+    category: "Social Media",
+    client: "SUNROOF TECHNO",
+    title: "Technology Social Media Campaign",
+    description:
+      "A branded social media creative developed for Sunroof Techno to communicate its message through visually engaging and platform-ready content.",
+    image: project1Image,
+    link: "https://www.instagram.com/p/DcOMPwADBSP/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
+    stats: [
+      "Technology-focused creative",
+      "Brand communication",
+      "Instagram-ready design",
+    ],
+    technologies: [
+      "Instagram",
+      "Creative Design",
+      "Branding",
+    ],
+  },
+
+  {
+    id: 14,
+    category: "Social Media",
+    client: "SUNROOF TECHNO",
+    title: "Branded Instagram Creative",
+    description:
+      "A visually engaging Instagram creative designed to communicate Sunroof Techno's brand message with a clear layout and consistent visual identity.",
+    image: project2Image,
+    link: "https://www.instagram.com/p/DbnvORhJBNL/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
+    stats: [
+      "Branded visual content",
+      "Clear message hierarchy",
+      "Social media optimized",
+    ],
+    technologies: [
+      "Social Media",
+      "Creative Design",
+      "Brand Identity",
+    ],
+  },
+
+  {
+    id: 15,
+    category: "Social Media",
+    client: "SUNROOF TECHNO",
+    title: "Promotional Social Creative",
+    description:
+      "A promotional social media creative designed to present the brand message in an engaging visual format suitable for Instagram audiences.",
+    image: project3Image,
+    link: "https://www.instagram.com/p/DLH4ILIJERV/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
+    stats: [
+      "Promotional creative",
+      "Brand-focused design",
+      "Instagram content",
+    ],
+    technologies: [
+      "Instagram",
+      "Graphic Design",
+      "Content Design",
+    ],
+  },
+
+  {
+    id: 16,
+    category: "Social Media",
+    client: "BN BAIJAL",
+    title: "Branded Instagram Creative",
+    description:
+      "A professionally designed Instagram creative for BN Baijal, combining visual communication and brand presentation for social media.",
+    image: project4Image,
+    link: "https://www.instagram.com/p/DLFRnEapPBk/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
+    stats: [
+      "Branded social creative",
+      "Visual communication",
+      "Instagram optimized",
+    ],
+    technologies: [
+      "Social Media",
+      "Graphic Design",
+      "Branding",
+    ],
   },
 ];
 
@@ -239,269 +405,5 @@ export const portfolioCategories: PortfolioCategory[] = [
   "Websites",
   "Logos",
   "Reels & Videos",
-  "Social Media",
+  "Social Media"
 ];
-
-// export type PortfolioCategory =
-//   | "Websites"
-//   | "Logos"
-//   | "Reels & Videos"
-//   | "Social Media"
-//   | "E-commerce";
-
-// export interface PortfolioProject {
-//   id: number;
-//   category: PortfolioCategory;
-//   client: string;
-//   title: string;
-//   description: string;
-//   gradient: string;
-//   stats: string[];
-//   technologies: string[];
-// }
-
-// export interface PortfolioStat {
-//   value: string;
-//   label: string;
-// }
-
-// export const portfolioProjects: PortfolioProject[] = [
-//   {
-//     id: 1,
-//     category: "Websites",
-//     client: "TECHFLOW",
-//     title: "SaaS Business Platform",
-//     description:
-//       "Modern SaaS website designed to communicate complex technology through a clean, conversion-focused experience.",
-//     gradient:
-//       "linear-gradient(135deg, #4f46e5 0%, #6d28d9 100%)",
-//     stats: [
-//       "185% increase in qualified leads",
-//       "3.2x higher engagement",
-//       "42% lower bounce rate",
-//     ],
-//     technologies: ["React", "UI/UX", "SEO"],
-//   },
-
-//   {
-//     id: 2,
-//     category: "Websites",
-//     client: "URBANSPACE",
-//     title: "Real Estate Website",
-//     description:
-//       "Premium real-estate platform with property discovery, lead generation and a polished visual experience.",
-//     gradient:
-//       "linear-gradient(135deg, #4778d8 0%, #3f82d6 100%)",
-//     stats: [
-//       "120% increase in inquiries",
-//       "68% more website engagement",
-//       "2.8x lead generation",
-//     ],
-//     technologies: ["React", "CMS", "SEO"],
-//   },
-
-//   {
-//     id: 3,
-//     category: "Websites",
-//     client: "EDUTECH",
-//     title: "Education Platform",
-//     description:
-//       "Conversion-focused education website built to simplify course discovery and student registrations.",
-//     gradient:
-//       "linear-gradient(135deg, #ec4899 0%, #7c3aed 100%)",
-//     stats: [
-//       "95% increase in registrations",
-//       "2.4x session duration",
-//       "51% increase in conversions",
-//     ],
-//     technologies: ["React", "UX Strategy", "Analytics"],
-//   },
-
-//   {
-//     id: 4,
-//     category: "Logos",
-//     client: "NEXORA",
-//     title: "Brand Identity System",
-//     description:
-//       "Complete visual identity designed around a bold, memorable and technology-focused brand personality.",
-//     gradient:
-//       "linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)",
-//     stats: [
-//       "Complete brand identity",
-//       "12+ brand assets",
-//       "Consistent visual system",
-//     ],
-//     technologies: ["Branding", "Logo Design", "Visual Identity"],
-//   },
-
-//   {
-//     id: 5,
-//     category: "Logos",
-//     client: "ORBIT",
-//     title: "Startup Logo Design",
-//     description:
-//       "Minimal and scalable logo identity created for a fast-growing technology startup.",
-//     gradient:
-//       "linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)",
-//     stats: [
-//       "3 identity concepts",
-//       "25+ logo variations",
-//       "Complete brand guidelines",
-//     ],
-//     technologies: ["Logo Design", "Branding", "Guidelines"],
-//   },
-
-//   {
-//     id: 6,
-//     category: "Reels & Videos",
-//     client: "GROWTHLAB",
-//     title: "Social Video Campaign",
-//     description:
-//       "High-retention short-form video campaign created to improve reach, engagement and brand awareness.",
-//     gradient:
-//       "linear-gradient(135deg, #f97316 0%, #ec4899 100%)",
-//     stats: [
-//       "2.5M+ total views",
-//       "320K+ engagements",
-//       "8.7% average engagement",
-//     ],
-//     technologies: ["Reels", "Video Editing", "Motion"],
-//   },
-
-//   {
-//     id: 7,
-//     category: "Reels & Videos",
-//     client: "FITSYNC",
-//     title: "Fitness Content Series",
-//     description:
-//       "Energetic short-form video series designed around product awareness and audience growth.",
-//     gradient:
-//       "linear-gradient(135deg, #ef4444 0%, #f97316 100%)",
-//     stats: [
-//       "1.8M+ views",
-//       "140K+ interactions",
-//       "3.5x content reach",
-//     ],
-//     technologies: ["Video", "Reels", "Content Strategy"],
-//   },
-
-//   {
-//     id: 8,
-//     category: "Social Media",
-//     client: "LUMINA",
-//     title: "Social Media Growth",
-//     description:
-//       "Full social media strategy combining creative content, campaign planning and audience engagement.",
-//     gradient:
-//       "linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%)",
-//     stats: [
-//       "210% follower growth",
-//       "4.2x engagement rate",
-//       "68% reach increase",
-//     ],
-//     technologies: ["Instagram", "Strategy", "Content"],
-//   },
-
-//   {
-//     id: 9,
-//     category: "Social Media",
-//     client: "URBAN BITES",
-//     title: "Restaurant Campaign",
-//     description:
-//       "Creative social media campaign designed to increase local awareness and customer visits.",
-//     gradient:
-//       "linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)",
-//     stats: [
-//       "185% reach increase",
-//       "94K+ campaign views",
-//       "3.1x engagement",
-//     ],
-//     technologies: ["Social Media", "Campaigns", "Creative"],
-//   },
-
-//   {
-//     id: 10,
-//     category: "E-commerce",
-//     client: "CHRONOLITE",
-//     title: "Luxury Watch Store",
-//     description:
-//       "Premium e-commerce website for luxury watches with 3D product views, detailed specifications, and secure checkout.",
-//     gradient:
-//       "linear-gradient(135deg, #4f46e5 0%, #6d28d9 100%)",
-//     stats: [
-//       "₹50L monthly revenue",
-//       "3.5% conversion rate",
-//       "Average order value up 40%",
-//     ],
-//     technologies: ["Shopify", "3D Modeling", "Payment Gateway"],
-//   },
-
-//   {
-//     id: 11,
-//     category: "E-commerce",
-//     client: "FARMPRESH DIRECT",
-//     title: "Organic Food Marketplace",
-//     description:
-//       "Multi-vendor marketplace for organic food products with delivery tracking, subscription boxes, and vendor dashboard.",
-//     gradient:
-//       "linear-gradient(135deg, #6478d8 0%, #438fd4 100%)",
-//     stats: [
-//       "200+ active vendors",
-//       "₹2Cr GMV in first year",
-//       "98% customer satisfaction",
-//     ],
-//     technologies: [
-//       "Custom Platform",
-//       "Logistics API",
-//       "Subscription Engine",
-//     ],
-//   },
-
-//   {
-//     id: 12,
-//     category: "E-commerce",
-//     client: "GLOWLAB COSMETICS",
-//     title: "Beauty Products Store",
-//     description:
-//       "AR-powered beauty e-commerce site with virtual try-on, skin quiz, and personalized product recommendations.",
-//     gradient:
-//       "linear-gradient(135deg, #bd6b86 0%, #5454cf 100%)",
-//     stats: [
-//       "60% increase in conversions",
-//       "AR try-on used by 40% visitors",
-//       "Repeat purchase rate: 55%",
-//     ],
-//     technologies: [
-//       "WooCommerce",
-//       "AR Integration",
-//       "AI Recommendations",
-//     ],
-//   },
-// ];
-
-// export const portfolioStats: PortfolioStat[] = [
-//   {
-//     value: "150+",
-//     label: "Projects Delivered",
-//   },
-//   {
-//     value: "50M+",
-//     label: "Total Views Generated",
-//   },
-//   {
-//     value: "₹10Cr+",
-//     label: "Revenue Generated",
-//   },
-//   {
-//     value: "95%",
-//     label: "Client Satisfaction",
-//   },
-// ];
-
-// export const portfolioCategories: PortfolioCategory[] = [
-//   "Websites",
-//   "Logos",
-//   "Reels & Videos",
-//   "Social Media",
-//   "E-commerce",
-// ];

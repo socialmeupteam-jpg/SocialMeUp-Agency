@@ -87,21 +87,21 @@ function Hero() {
         >
           <div className={styles.stat}>
             <strong>
-              500<span>+</span>
+              100<span>+</span>
             </strong>
             <span>Projects Delivered</span>
           </div>
 
           <div className={styles.stat}>
             <strong>
-              50<span>+</span>
+              20<span>+</span>
             </strong>
             <span>Active Clients</span>
           </div>
 
           <div className={styles.stat}>
             <strong>
-              5<span>+</span>
+              7<span>+</span>
             </strong>
             <span>Years of Excellence</span>
           </div>
