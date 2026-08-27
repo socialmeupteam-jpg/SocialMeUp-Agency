@@ -90,6 +90,7 @@ function Terms() {
                   help of the{" "}
                   <a
                     href="https://www.termsfeed.com/terms-conditions-generator/"
+                    rel="external nofollow noopener noreferrer"
                     target="_blank"
                   >
                     Terms and Conditions Generator

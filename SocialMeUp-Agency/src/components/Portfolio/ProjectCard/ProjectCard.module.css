@@ -39,7 +39,6 @@
   aspect-ratio: 16 / 9;
 
   overflow: hidden;
-
   background: linear-gradient(135deg, #4b5fff 0%, #6540d3 100%);
 
   color: #ffffff;
@@ -155,7 +154,6 @@
 
 .card:hover .external {
   transform: translate(2px, -2px);
-
   background: linear-gradient(135deg, #4b5fff, #6540d3);
 
   border-color: rgba(255, 255, 255, 0.3);
@@ -261,7 +259,6 @@
   height: 5px;
 
   border-radius: 50%;
-
   background: linear-gradient(135deg, #4b5fff, #f35b7b);
 }
 

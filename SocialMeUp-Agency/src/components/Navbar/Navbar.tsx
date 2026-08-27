@@ -79,6 +79,7 @@ function Navbar() {
         });
       }
 
+      setIsMenuOpen(false);
       return;
     }
 

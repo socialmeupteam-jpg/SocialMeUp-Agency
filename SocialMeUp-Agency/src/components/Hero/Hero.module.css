@@ -153,6 +153,7 @@
 
 .statsCard {
   position: sticky;
+  top: 7rem;
   flex: 0 0 15rem;
   display: flex;
   flex-direction: column;
@@ -203,6 +204,7 @@
 
   .statsCard {
     width: 14rem;
+    flex-basis: 14rem;
   }
 }
 
@@ -227,6 +229,7 @@
 
   .statsCard {
     width: 13rem;
+    flex-basis: 13rem;
   }
 }
 
