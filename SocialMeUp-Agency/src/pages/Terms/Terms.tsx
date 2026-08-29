@@ -2,12 +2,18 @@ import { motion } from "framer-motion";
 
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import Seo from "../../components/Seo";
 
 import styles from "./Terms.module.css";
 
 function Terms() {
   return (
     <main className={styles.page}>
+      <Seo
+        title="Terms & Conditions | SocialMeUp"
+        description="Read the terms and conditions that apply to SocialMeUp's website and digital marketing services."
+        path="/terms"
+      />
       <Navbar />
       <div className={styles.backgroundGlowOne} />
       <div className={styles.backgroundGlowTwo} />

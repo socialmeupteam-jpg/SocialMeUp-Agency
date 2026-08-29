@@ -5,10 +5,16 @@ import Footer from "../../components/Footer/Footer";
 import ContactHero from "../../components/Contact/ContactHero/ContactHero";
 import ContactInfo from "../../components/Contact/ContactInfo/ContactInfo";
 import ContactForm from "../../components/Contact/ContactForm/ContactForm";
+import Seo from "../../components/Seo";
 
 const ContactPage = () => {
   return (
     <>
+      <Seo
+        title="Contact SocialMeUp | Digital Marketing Agency"
+        description="Contact SocialMeUp for SEO, social media, performance marketing, branding, and content marketing services in Lucknow, Delhi, and across India."
+        path="/contact"
+      />
       <Navbar />
       <main className={styles.contactPage}>
         {/* Decorative Background */}

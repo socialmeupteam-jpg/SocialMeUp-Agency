@@ -246,7 +246,7 @@
 
 @media (max-width: 1200px) {
   .container {
-    width: min(100% - 3rem, 1280px);
+    width: min(calc(100% - 3rem), 1280px);
   }
 
   .servicesGrid {
@@ -270,7 +270,7 @@
 
 @media (max-width: 992px) {
   .container {
-    width: min(100% - 2.5rem, 1280px);
+    width: min(calc(100% - 2.5rem), 1280px);
   }
 
   .sectionHeader {
@@ -302,7 +302,7 @@
   }
 
   .container {
-    width: min(100% - 1.5rem, 1280px);
+    width: min(calc(100% - 1.5rem), 1280px);
   }
 
   .heading {

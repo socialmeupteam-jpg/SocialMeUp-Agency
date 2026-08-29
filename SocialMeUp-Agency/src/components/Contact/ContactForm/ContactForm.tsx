@@ -57,8 +57,6 @@ const ContactForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    console.log(formData);
-
     // TODO:
     // Connect API
     // Reset Form
@@ -76,10 +74,11 @@ const ContactForm = () => {
     >
       <div className={styles.row}>
         <div className={styles.field}>
-          <label>Full Name *</label>
+          <label htmlFor="fullName">Full Name *</label>
 
           <input
             type="text"
+            id="fullName"
             name="fullName"
             placeholder="John Doe"
             value={formData.fullName}
@@ -89,10 +88,11 @@ const ContactForm = () => {
         </div>
 
         <div className={styles.field}>
-          <label>Email Address *</label>
+          <label htmlFor="email">Email Address *</label>
 
           <input
             type="email"
+            id="email"
             name="email"
             placeholder="john@example.com"
             value={formData.email}
@@ -104,10 +104,11 @@ const ContactForm = () => {
 
       <div className={styles.row}>
         <div className={styles.field}>
-          <label>Phone Number *</label>
+          <label htmlFor="phone">Phone Number *</label>
 
           <input
             type="tel"
+            id="phone"
             name="phone"
             placeholder="+91 9876543210"
             value={formData.phone}
@@ -117,10 +118,11 @@ const ContactForm = () => {
         </div>
 
         <div className={styles.field}>
-          <label>Company Name</label>
+          <label htmlFor="company">Company Name</label>
 
           <input
             type="text"
+            id="company"
             name="company"
             placeholder="Your Company"
             value={formData.company}
@@ -131,10 +133,11 @@ const ContactForm = () => {
 
       <div className={styles.row}>
         <div className={styles.field}>
-          <label>Service Required</label>
+          <label htmlFor="service">Service Required *</label>
 
           <select
             name="service"
+            id="service"
             value={formData.service}
             onChange={handleChange}
             required
@@ -150,9 +153,9 @@ const ContactForm = () => {
         </div>
 
         <div className={styles.field}>
-          <label>Estimated Budget</label>
+          <label htmlFor="budget">Estimated Budget</label>
 
-          <select name="budget" value={formData.budget} onChange={handleChange}>
+          <select id="budget" name="budget" value={formData.budget} onChange={handleChange}>
             <option value="">Select Budget</option>
             <option>Below ₹25,000</option>
             <option>₹25,000 - ₹50,000</option>
@@ -164,10 +167,11 @@ const ContactForm = () => {
 
       <div className={styles.row}>
         <div className={styles.field}>
-          <label>Nature of Business</label>
+          <label htmlFor="businessNature">Nature of Business</label>
 
           <select
             name="businessNature"
+            id="businessNature"
             value={formData.businessNature}
             onChange={handleChange}
           >
@@ -182,10 +186,11 @@ const ContactForm = () => {
         </div>
 
         <div className={styles.field}>
-          <label>Location</label>
+          <label htmlFor="location">Location</label>
 
           <input
             type="text"
+            id="location"
             name="location"
             placeholder="City, State"
             value={formData.location}
@@ -195,10 +200,11 @@ const ContactForm = () => {
       </div>
 
       <div className={styles.field}>
-        <label>Tell Us About Your Project</label>
+        <label htmlFor="message">Tell Us About Your Project</label>
 
         <textarea
           name="message"
+          id="message"
           rows={7}
           placeholder="Describe your project, goals, requirements, or any ideas you have..."
           value={formData.message}

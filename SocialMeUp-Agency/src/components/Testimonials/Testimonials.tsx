@@ -47,8 +47,6 @@ function Testimonials() {
             </motion.h2>
           </motion.div>
 
-          {/* <TestimonialSlider />
-           */}
           <TestimonialCarousel />
         </div>
       </div>

@@ -122,7 +122,7 @@
 
 @media (min-width: 769px) and (max-width: 1100px) {
   .container {
-    width: min(100% - 48px, 900px);
+    width: min(calc(100% - 48px), 900px);
   }
 }
 
@@ -142,7 +142,7 @@
   }
 
   .container {
-    width: min(100% - 32px, 600px);
+    width: min(calc(100% - 32px), 600px);
   }
 
   .heading {

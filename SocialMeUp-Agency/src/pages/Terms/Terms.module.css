@@ -118,7 +118,7 @@
 
 @media (max-width: 767px) {
   .container {
-    width: min(100% - 32px, 1180px);
+    width: min(calc(100% - 32px), 1180px);
   }
 
   .hero {
@@ -164,7 +164,7 @@
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .container {
-    width: min(100% - 48px, 1180px);
+    width: min(calc(100% - 48px), 1180px);
   }
 
   .hero {

@@ -676,7 +676,7 @@
 
 @media (max-width: 900px) {
   .container {
-    width: min(100% - 32px, 700px);
+    width: min(calc(100% - 32px), 700px);
   }
 
   .threeColumns {
@@ -694,7 +694,7 @@
 
 @media (min-width: 901px) and (max-width: 1199px) {
   .container {
-    width: min(100% - 48px, 1080px);
+    width: min(calc(100% - 48px), 1080px);
   }
 }
 
@@ -749,7 +749,7 @@
 
 @media (max-width: 480px) {
   .container {
-    width: min(100% - 24px, 100%);
+    width: min(calc(100% - 24px), 100%);
   }
 
   .hero h1 {

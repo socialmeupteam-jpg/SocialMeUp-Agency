@@ -112,7 +112,7 @@ function Navbar() {
         >
           <span className={styles.logoMark} aria-hidden="true">
             <img
-              src="/Logo.png"
+              src="/Logo.webp"
               alt="SocialMeUp-logo"
               className="logo"
             />

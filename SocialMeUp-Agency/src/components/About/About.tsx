@@ -97,7 +97,7 @@ function About() {
                 <div className={styles.badgeContent}>
                   <div className={styles.badgeLogo}>
                     <img
-                      src="/Logo-2.png"
+                      src="/Logo-2.webp"
                       alt="SocialMeUp Logo"
                       className={styles.badgeLogoImage}
                     />

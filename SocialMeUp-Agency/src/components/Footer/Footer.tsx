@@ -1,6 +1,6 @@
 import styles from "./Footer.module.css";
 
-import logo from "/Logo.png";
+import logo from "/Logo.webp";
 
 import {
   FaInstagram,

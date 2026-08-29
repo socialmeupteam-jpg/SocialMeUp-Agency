@@ -8,6 +8,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import PortfolioSection from "../../components/Portfolio/PortfolioSection/PortfolioSection";
 import PortfolioCTA from "../../components/Portfolio/PortfolioCTA/PortfolioCTA";
+import Seo from "../../components/Seo";
 
 import {
   portfolioCategories,
@@ -30,6 +31,11 @@ function Portfolio() {
 
   return (
     <>
+      <Seo
+        title="Portfolio | SocialMeUp Digital Marketing Agency"
+        description="Explore SocialMeUp's website, social media, reel, and brand identity work for businesses across India."
+        path="/portfolio"
+      />
       <Navbar />
       <main className={styles.page}>
         <div className={styles.backgroundGlowOne} />

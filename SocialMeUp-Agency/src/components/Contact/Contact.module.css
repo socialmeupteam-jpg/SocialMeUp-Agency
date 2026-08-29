@@ -255,7 +255,7 @@
   }
 
   .container {
-    width: min(100% - 32px, 560px);
+    width: min(calc(100% - 32px), 560px);
   }
 
   .infoGrid {

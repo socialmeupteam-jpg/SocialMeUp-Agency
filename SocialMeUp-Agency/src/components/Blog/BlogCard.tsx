@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "./BlogCard.module.css";
 
 interface BlogPost {
-  id: number;
+  id: string;
   slug: string;
   title: string;
   description: string;

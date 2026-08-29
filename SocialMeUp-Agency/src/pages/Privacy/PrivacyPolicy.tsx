@@ -2,12 +2,18 @@ import { motion } from "framer-motion";
 
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import Seo from "../../components/Seo";
 
 import styles from "./PrivacyPolicy.module.css";
 
 function PrivacyPolicy() {
   return (
     <main className={styles.page}>
+      <Seo
+        title="Privacy Policy | SocialMeUp"
+        description="Read SocialMeUp's privacy policy and learn how we collect, use, and protect personal information."
+        path="/privacy-policy"
+      />
       <Navbar />
       <div className={styles.backgroundGlowOne} />
       <div className={styles.backgroundGlowTwo} />
