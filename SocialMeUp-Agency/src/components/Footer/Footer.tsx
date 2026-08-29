@@ -26,7 +26,7 @@ function Footer() {
         <div className={styles.grid}>
           {/* Company */}
           <div className={styles.company}>
-            <img src={logo} alt="SocialMeUp" />
+            <img src={logo} alt="SocialMeUp" width={1234} height={1275} />
 
             <p>
               Established in 2021, Social Me Up is a dynamic digital marketing

@@ -10,7 +10,7 @@ const ContactPage = lazy(() => import("./pages/Contact/ContactPage"));
 
 function App() {
   return (
-    <Suspense fallback={<main aria-busy="true" />}>
+    <Suspense fallback={<main aria-busy="true"><p>Loading...</p></main>}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />

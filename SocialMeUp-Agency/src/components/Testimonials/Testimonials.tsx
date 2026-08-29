@@ -1,6 +1,16 @@
+import {
+  lazy,
+  Suspense,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { motion, type Variants } from "framer-motion";
 import styles from "./Testimonials.module.css";
-import TestimonialCarousel from "./TestimonialCarousel/TestimonialCarousel";
+
+const TestimonialCarousel = lazy(
+  () => import("./TestimonialCarousel/TestimonialCarousel"),
+);
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
@@ -19,6 +29,44 @@ const staggerContainer: Variants = {
     },
   },
 };
+
+function DeferredTestimonialCarousel() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [shouldLoad, setShouldLoad] = useState(false);
+
+  useEffect(() => {
+    const target = containerRef.current;
+
+    if (!target || !("IntersectionObserver" in window)) {
+      setShouldLoad(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldLoad(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "1200px 0px" },
+    );
+
+    observer.observe(target);
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={containerRef}>
+      {shouldLoad && (
+        <Suspense fallback={null}>
+          <TestimonialCarousel />
+        </Suspense>
+      )}
+    </div>
+  );
+}
 
 function Testimonials() {
   return (
@@ -47,7 +95,7 @@ function Testimonials() {
             </motion.h2>
           </motion.div>
 
-          <TestimonialCarousel />
+          <DeferredTestimonialCarousel />
         </div>
       </div>
     </section>

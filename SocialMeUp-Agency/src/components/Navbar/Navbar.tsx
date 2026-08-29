@@ -115,6 +115,8 @@ function Navbar() {
               src="/Logo.webp"
               alt="SocialMeUp-logo"
               className="logo"
+              width={1234}
+              height={1275}
             />
           </span>
         </a>

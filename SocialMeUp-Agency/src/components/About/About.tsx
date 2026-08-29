@@ -87,6 +87,9 @@ function About() {
                   src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
                   alt="SocialMeUp Team"
                   className={styles.aboutImage}
+                  width={800}
+                  height={533}
+                  loading="lazy"
                 />
 
                 <div className={styles.aboutImageOverlay}></div>
@@ -100,6 +103,9 @@ function About() {
                       src="/Logo-2.webp"
                       alt="SocialMeUp Logo"
                       className={styles.badgeLogoImage}
+                      width={590}
+                      height={589}
+                      loading="lazy"
                     />
                   </div>
                   <div className={styles.badgeText}>

@@ -1,9 +1,9 @@
 import { FiArrowRight, FiPlay } from "react-icons/fi";
 import { motion, type Variants } from "framer-motion";
 
-import homepageHero from "../../assets/images/homepage-hero.webp";
-
 import styles from "./Hero.module.css";
+
+const homepageHero = "/homepage-hero.webp";
 
 const containerVariants: Variants = {
   hidden: {},
