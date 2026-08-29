@@ -57,10 +57,32 @@ const ContactForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // TODO:
-    // Connect API
-    // Reset Form
-    // Show Toast
+    // WhatsApp number with country code.
+    // Do not use +, spaces, brackets, or hyphens.
+    const whatsappNumber = "919238341904";
+
+    const whatsappMessage = `
+*New Contact Form Enquiry*
+
+*Full Name:* ${formData.fullName}
+*Email:* ${formData.email}
+*Phone:* ${formData.phone}
+*Company:* ${formData.company || "Not provided"}
+*Service:* ${formData.service}
+*Budget:* ${formData.budget || "Not provided"}
+*Business Nature:* ${formData.businessNature || "Not provided"}
+*Location:* ${formData.location || "Not provided"}
+
+*Project Details:*
+${formData.message || "Not provided"}
+    `.trim();
+
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    // Open WhatsApp with the message pre-filled.
+    window.location.href = whatsappUrl;
   };
 
   return (
@@ -110,7 +132,7 @@ const ContactForm = () => {
             type="tel"
             id="phone"
             name="phone"
-            placeholder="+91 9876543210"
+            placeholder="+91 9123456789"
             value={formData.phone}
             onChange={handleChange}
             required
@@ -155,7 +177,12 @@ const ContactForm = () => {
         <div className={styles.field}>
           <label htmlFor="budget">Estimated Budget</label>
 
-          <select id="budget" name="budget" value={formData.budget} onChange={handleChange}>
+          <select
+            id="budget"
+            name="budget"
+            value={formData.budget}
+            onChange={handleChange}
+          >
             <option value="">Select Budget</option>
             <option>Below ₹25,000</option>
             <option>₹25,000 - ₹50,000</option>

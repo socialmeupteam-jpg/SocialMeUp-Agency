@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 
 const Home = lazy(() => import("./pages/Home/Home"));
 const Portfolio = lazy(() => import("./pages/Portfolio/Portfolio"));
@@ -11,6 +12,7 @@ const ContactPage = lazy(() => import("./pages/Contact/ContactPage"));
 function App() {
   return (
     <Suspense fallback={<main aria-busy="true"><p>Loading...</p></main>}>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />

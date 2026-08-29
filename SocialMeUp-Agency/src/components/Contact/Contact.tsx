@@ -65,6 +65,8 @@ function Contact() {
               <p>+91 9599064721</p>
 
               <p>+91 9559618555</p>
+
+              <p>+91 9238341904</p>
             </article>
 
             <article className={styles.card}>
