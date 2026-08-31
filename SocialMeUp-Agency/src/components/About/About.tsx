@@ -1,7 +1,7 @@
 import { FiTarget, FiTrendingUp, FiUsers } from "react-icons/fi";
 import { GoLightBulb } from "react-icons/go";
 import { motion, type Variants } from "framer-motion";
-
+import aboutImage from "../../assets/images/About.webp"
 import styles from "./About.module.css";
 
 const fadeUp: Variants = {
@@ -84,7 +84,7 @@ function About() {
             <div className={styles.aboutImageContainer}>
               <div className={styles.aboutImageWrapper}>
                 <img
-                  src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+                  src={aboutImage}
                   alt="SocialMeUp Team"
                   className={styles.aboutImage}
                   width={800}
@@ -101,7 +101,7 @@ function About() {
                 <div className={styles.badgeContent}>
                   <div className={styles.badgeLogo}>
                     <img
-                      src="/Logo-2.webp"
+                      src="/Logo.webp"
                       alt="SocialMeUp Logo"
                       className={styles.badgeLogoImage}
                       width={590}

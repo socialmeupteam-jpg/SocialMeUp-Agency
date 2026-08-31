@@ -10,10 +10,14 @@ import Reel3Image from "/portfolio/Reels/Reel-3.webp";
 import Reel4Image from "/portfolio/Reels/Reel-4.webp";
 import Reel5Image from "/portfolio/Reels/Reel-5.webp";
 import Reel6Image from "/portfolio/Reels/Reel-6.webp";
+import Reel7Image from "/portfolio/Reels/Reel-7.webp";
+import Reel8Image from "/portfolio/Reels/Reel-8.webp";
 import project1Image from "/portfolio/SocialMedia/project-1.webp";
 import project2Image from "/portfolio/SocialMedia/project-2.webp";
 import project3Image from "/portfolio/SocialMedia/project-3.webp";
 import project4Image from "/portfolio/SocialMedia/project-4.webp";
+import project5Image from "/portfolio/SocialMedia/project-5.webp";
+
 
 
 export type PortfolioCategory =
@@ -198,18 +202,18 @@ export const portfolioProjects: PortfolioProject[] = [
     id: 8,
     category: "Reels & Videos",
     client: "BN BAIJAL",
-    title: "Product Promotional Reel",
+    title: "Owner History Reel",
     description:
-      "A product-focused reel designed to present the offering through engaging visuals, concise storytelling and attention-grabbing motion.",
+      "An owner-focused reel designed to present the history through engaging visuals, concise storytelling and attention-grabbing motion.",
     image: Reel2Image,
     link: "https://www.instagram.com/reel/DLXTLL2B9cK/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
     stats: [
-      "Product-focused storytelling",
+      "History storytelling",
       "Visual motion design",
       "Social media optimized",
     ],
     technologies: [
-      "Product Video",
+      "History Video",
       "Reels",
       "Motion Graphics",
     ],
@@ -239,14 +243,14 @@ export const portfolioProjects: PortfolioProject[] = [
   {
     id: 10,
     category: "Reels & Videos",
-    client: "SOCIALMEUP AGENCY",
-    title: "Product Promotional Reel",
+    client: "BN Baijal",
+    title: "Influencer Reel",
     description:
-      "Creative promotional video content produced for social media, combining product-focused visuals, editing and motion to create an engaging short-form experience.",
+      "Creative promotional influencer shoot video content produced for social media, combining product-focused visuals, editing and motion to create an engaging short-form experience.",
     image: Reel4Image,
-    link: "https://www.instagram.com/reel/DcCto1_EdQm/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
+    link: "https://www.instagram.com/reel/DLSJuAXS9qA/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
     stats: [
-      "Product-focused creative",
+      "Product-focused influencer shoot",
       "Motion-led editing",
       "Social media content",
     ],
@@ -279,12 +283,12 @@ export const portfolioProjects: PortfolioProject[] = [
   }, {
     id: 12,
     category: "Reels & Videos",
-    client: "SUNROOF TECHNO",
-    title: "Brand Promotional Reel",
+    client: "BN Baijal",
+    title: "Client Testimonial",
     description:
-      "A social media promotional reel created for Sunroof Techno to present its brand and energy solutions through engaging visuals and short-form storytelling.",
+      "A client testimonial reel created for BN Baijal to communicate the client experience through engaging visuals and short-form storytelling.",
     image: Reel6Image,
-    link: "https://www.instagram.com/reel/DcCJGTHznx7/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
+    link: "https://www.instagram.com/reel/DLH2k28Clo1/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
     stats: [
       "Brand promotional content",
       "Short-form storytelling",
@@ -294,11 +298,53 @@ export const portfolioProjects: PortfolioProject[] = [
       "Video Editing",
     ],
   },
+ {
+    id: 13,
+    category: "Reels & Videos",
+    client: "BN Baijal",
+    title: "Emotional story",
+    description:
+      "An emotional storytelling reel created for BN Baijal to express the emotions and showcase the trust through engaging heart-touching visuals and short-form storytelling.",
+    image: Reel7Image,
+    link: "https://www.instagram.com/reel/DLKcr5jMCwU/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
+    stats: [
+      "Client Trust",
+      "Short-form storytelling",
+    ],
+    technologies: [
+      "Reels",
+      "Video Editing",
+    ],
+  },
+
+ {
+  id: 14,
+  category: "Reels & Videos",
+  client: "SocialMeUp Agency",
+  title: "BTS Shoot",
+  description:
+    "A behind-the-scenes reel capturing the energy, creativity, and production process behind a SocialMeUp Agency shoot. The content was crafted to showcase the brand's creative approach while giving the audience an authentic look into the making of the final production.",
+  image: Reel8Image,
+  link: "https://www.instagram.com/reel/DcWBp1pq0Po/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
+  stats: [
+    "Behind-the-scenes production",
+    "Authentic brand storytelling",
+    "Short-form video content",
+    "Social media engagement",
+  ],
+  technologies: [
+    "Reels",
+    "Video Editing",
+    "Content Production",
+    "Short-form Storytelling",
+  ],
+},
+
 
   // Social Media
 
   {
-    id: 13,
+    id: 15,
     category: "Social Media",
     client: "SUNROOF TECHNO",
     title: "Technology Social Media Campaign",
@@ -319,7 +365,7 @@ export const portfolioProjects: PortfolioProject[] = [
   },
 
   {
-    id: 14,
+    id: 16,
     category: "Social Media",
     client: "SUNROOF TECHNO",
     title: "Branded Instagram Creative",
@@ -340,7 +386,7 @@ export const portfolioProjects: PortfolioProject[] = [
   },
 
   {
-    id: 15,
+    id: 17,
     category: "Social Media",
     client: "SUNROOF TECHNO",
     title: "Promotional Social Creative",
@@ -361,7 +407,7 @@ export const portfolioProjects: PortfolioProject[] = [
   },
 
   {
-    id: 16,
+    id: 18,
     category: "Social Media",
     client: "BN BAIJAL",
     title: "Branded Instagram Creative",
@@ -380,6 +426,28 @@ export const portfolioProjects: PortfolioProject[] = [
       "Branding",
     ],
   },
+{
+  id: 19,
+  category: "Social Media",
+  client: "BN BAIJAL",
+  title: "Brand Testimonial Instagram Creative",
+  description:
+    "A professionally crafted Instagram testimonial creative for BN Baijal, designed to communicate client trust and brand credibility through a clean, engaging visual layout. The creative combines testimonial-led messaging with strong brand presentation to build social proof and audience confidence.",
+  image: project5Image,
+  link: "https://www.instagram.com/p/DLXW-Rgh0b1/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
+  stats: [
+    "Testimonial-led content",
+    "Brand credibility & social proof",
+    "Engagement-focused design",
+    "Instagram-ready creative",
+  ],
+  technologies: [
+    "Social Media Design",
+    "Graphic Design",
+    "Branding",
+    "Content Strategy",
+  ],
+},
 ];
 
 export const portfolioStats: PortfolioStat[] = [
