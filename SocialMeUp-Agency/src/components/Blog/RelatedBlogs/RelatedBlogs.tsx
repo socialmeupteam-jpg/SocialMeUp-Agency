@@ -24,7 +24,12 @@ const RelatedBlogs = ({ blogs }: RelatedBlogsProps) => {
             key={blog.id}
           >
             <div className={styles.imageWrapper}>
-              <img src={blog.image} alt={blog.title} />
+              <img
+                src={blog.image}
+                alt={blog.title}
+                loading="lazy"
+                decoding="async"
+              />
             </div>
 
             <div className={styles.info}>

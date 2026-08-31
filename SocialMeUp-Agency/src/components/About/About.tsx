@@ -90,6 +90,7 @@ function About() {
                   width={800}
                   height={533}
                   loading="lazy"
+                  decoding="async"
                 />
 
                 <div className={styles.aboutImageOverlay}></div>
@@ -106,6 +107,7 @@ function About() {
                       width={590}
                       height={589}
                       loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <div className={styles.badgeText}>

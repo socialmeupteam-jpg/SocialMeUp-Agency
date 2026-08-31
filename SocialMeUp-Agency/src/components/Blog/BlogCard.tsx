@@ -25,7 +25,12 @@ function BlogCard({ post }: BlogCardProps) {
       >
         {/* Image */}
         <div className={styles.imageWrapper}>
-          <img src={post.image} alt={post.title} loading="lazy" />
+          <img
+            src={post.image}
+            alt={post.title}
+            loading="lazy"
+            decoding="async"
+          />
 
           <span className={styles.category}>{post.category}</span>
         </div>

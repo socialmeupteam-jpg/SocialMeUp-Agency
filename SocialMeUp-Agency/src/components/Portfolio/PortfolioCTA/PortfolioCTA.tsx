@@ -4,11 +4,25 @@ import styles from "./PortfolioCTA.module.css";
 
 function PortfolioCTA() {
   const handleStartProject = () => {
-    window.open(
-      "https://calendly.com/prashantsocialmeup/30min",
-      "_blank",
-      "noopener,noreferrer",
-    );
+    const whatsappNumber = "919238341904";
+
+    const whatsappMessage = `
+*Hello SocialMeUp! 👋*
+
+I came across your portfolio and I'm interested in starting a project with your team.
+
+I'd like to discuss how SocialMeUp can help my business achieve similar growth through strategic digital marketing.
+
+Please let me know the next steps.
+
+Thank you!
+    `.trim();
+
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    window.location.href = whatsappUrl;
   };
 
   return (

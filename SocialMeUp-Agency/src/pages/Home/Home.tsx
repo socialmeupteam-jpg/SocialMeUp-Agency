@@ -1,16 +1,18 @@
+import { lazy, Suspense } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Hero from "../../components/Hero/Hero";
 import About from "../../components/About/About";
 import Services from "../../components/Services/Services";
 import WhyUs from "../../components/WhyUs/WhyUs";
 import Industries from "../../components/Industries/Industries";
-import Blog from "../../components/Blog/Blog";
 import Testimonials from "../../components/Testimonials/Testimonials";
-import Contact from "../../components/Contact/Contact";
 import Footer from "../../components/Footer/Footer";
 import Seo from "../../components/Seo";
 
 import styles from "./Home.module.css";
+
+const Blog = lazy(() => import("../../components/Blog/Blog"));
+const Contact = lazy(() => import("../../components/Contact/Contact"));
 
 function Home() {
   return (
@@ -41,9 +43,13 @@ function Home() {
         <Services />
         <WhyUs />
         <Industries />
-        <Blog />
+        <Suspense fallback={null}>
+          <Blog />
+        </Suspense>
         <Testimonials />
-        <Contact />
+        <Suspense fallback={null}>
+          <Contact />
+        </Suspense>
         <Footer />
       </main>
     </>

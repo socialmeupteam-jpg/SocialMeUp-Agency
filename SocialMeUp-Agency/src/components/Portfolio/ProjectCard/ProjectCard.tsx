@@ -19,6 +19,7 @@ function ProjectCard({ project }: ProjectCardProps) {
           alt={`${project.client} - ${project.title}`}
           className={styles.projectImage}
           loading="lazy"
+          decoding="async"
         />
 
         <div className={styles.overlay} />

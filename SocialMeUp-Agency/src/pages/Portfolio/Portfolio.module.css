@@ -12,7 +12,7 @@
     ),
     #ffffff;
   color: #202020;
-  padding: 115px 0 90px;
+  padding: clamp(4rem, 5vw, 8rem) 0;
 }
 
 .container {
@@ -248,7 +248,7 @@
   color: #1c2335;
   font-size: 21px;
   line-height: 1;
-  font-weight: 750;
+  font-weight: 700;
 }
 
 .categoryIcon {
@@ -466,7 +466,7 @@
 
   font-size: 18px;
   line-height: 1.2;
-  font-weight: 750;
+  font-weight: 700;
   letter-spacing: -0.02em;
 }
 
@@ -645,7 +645,7 @@
 
   font-family: inherit;
   font-size: 12px;
-  font-weight: 750;
+  font-weight: 700;
 
   cursor: pointer;
 
