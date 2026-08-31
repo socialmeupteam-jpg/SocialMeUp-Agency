@@ -1,3 +1,4 @@
+/* Navbar */
 .navbar {
   position: sticky;
   top: 0;
@@ -16,14 +17,13 @@
   overflow: visible;
 }
 
+/* Navbar container */
 .navbarContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   width: calc(100% - 2rem);
-  max-width: none;
-
   min-height: 3.5rem;
 
   margin: 0 auto;
@@ -31,37 +31,48 @@
   box-sizing: border-box;
 }
 
-/* LOGO */
-
+/* Logo link */
 .logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
+
+  flex: 0 0 auto;
+  flex-shrink: 0;
 
   color: #ffffff;
   text-decoration: none;
   white-space: nowrap;
-
-  min-width: 0;
-  flex-shrink: 0;
 }
+
+/* Logo wrapper */
 .logoMark {
-  display: grid;
-  place-items: center;
+  display: block;
+
   width: 6rem;
   height: 6rem;
-  font-size: 1.6rem;
-  flex-shrink: 0;
+
+  min-width: 6rem;
+  min-height: 6rem;
+
+  flex: 0 0 6rem;
 }
 
+/* Logo image */
 .logoMark img {
+  display: block;
+
   width: 100%;
   height: 100%;
-  object-fit: cover;
+
+  min-width: 100%;
+  min-height: 100%;
+
+  max-width: none;
+
+  object-fit: contain;
 }
 
-/* DESKTOP NAVIGATION */
-
+/* Desktop navigation */
 .navigation {
   display: flex;
   align-items: center;
@@ -71,6 +82,7 @@
   min-width: 0;
 }
 
+/* Navigation link */
 .navigationLink {
   display: inline-flex;
   align-items: center;
@@ -88,16 +100,17 @@
 
   transition:
     color 200ms ease,
+    background-color 200ms ease,
     opacity 200ms ease;
 }
 
+/* Navigation link hover */
 .navigationLink:hover,
 .navigationLink:focus-visible {
   color: #ffffff;
 }
 
-/* CONSULTATION BUTTON */
-
+/* Consultation button */
 .consultationButton {
   display: inline-flex;
   align-items: center;
@@ -109,6 +122,7 @@
 
   border: none;
   border-radius: 999px;
+
   background: linear-gradient(90deg, #4762fd, #7121f7, #f66780);
 
   color: #ffffff;
@@ -126,14 +140,14 @@
     box-shadow 200ms ease;
 }
 
+/* Consultation button hover */
 .consultationButton:hover,
 .consultationButton:focus-visible {
   transform: translateY(-2px);
   box-shadow: 0 8px 22px rgba(113, 33, 247, 0.28);
 }
 
-/* BACK HOME BUTTON */
-
+/* Back to home button */
 .backHomeButton {
   display: inline-flex;
   align-items: center;
@@ -143,8 +157,8 @@
 
   padding: 0.7rem 1.4rem;
 
-  border-radius: 999px;
   border: 1px solid rgba(77, 98, 255, 0.35);
+  border-radius: 999px;
 
   background: rgba(77, 98, 255, 0.12);
 
@@ -162,6 +176,7 @@
     transform 200ms ease;
 }
 
+/* Back to home hover */
 .backHomeButton:hover,
 .backHomeButton:focus-visible {
   background: rgba(77, 98, 255, 0.22);
@@ -170,6 +185,7 @@
   transform: translateY(-2px);
 }
 
+/* Back home menu item */
 .backHome {
   display: flex;
   align-items: center;
@@ -195,11 +211,14 @@
     color 200ms ease;
 }
 
-.backHome:hover {
+/* Back home hover */
+.backHome:hover,
+.backHome:focus-visible {
   background: rgba(77, 98, 255, 0.22);
   color: #aab4ff;
 }
 
+/* Dropdown item */
 .dropdownItem {
   display: block;
 
@@ -221,17 +240,16 @@
     color 200ms ease;
 }
 
+/* Dropdown item hover */
 .dropdownItem:hover,
 .dropdownItem:focus-visible {
   background: rgba(255, 255, 255, 0.06);
   color: #ffffff;
 }
 
-/* MOBILE MENU BUTTON */
-
+/* Mobile menu button */
 .menuButton {
   display: none;
-
   align-items: center;
   justify-content: center;
 
@@ -247,29 +265,28 @@
 
   color: #ffffff;
 
-  cursor: pointer;
-
   font-size: 2rem;
 
-  flex-shrink: 0;
+  cursor: pointer;
+
+  flex: 0 0 2.75rem;
 
   transition:
     background-color 200ms ease,
     border-color 200ms ease;
 }
 
-.menuButton:hover {
+/* Mobile menu button hover */
+.menuButton:hover,
+.menuButton:focus-visible {
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 255, 255, 0.5);
 }
 
-/* LARGE DESKTOP
-   1440px+ */
-
+/* Large desktop */
 @media (min-width: 1440px) {
   .navbarContainer {
     width: calc(100% - 3rem);
-    max-width: none;
   }
 
   .navigation {
@@ -277,23 +294,17 @@
   }
 }
 
-/* DESKTOP / LAPTOP
-   1200px - 1439px */
-
-@media (max-width: 1439px) {
+/* Desktop */
+@media (min-width: 1200px) and (max-width: 1439px) {
   .navbarContainer {
     width: calc(100% - 3rem);
-    max-width: none;
   }
 }
 
-/* SMALL LAPTOP
-   1024px - 1199px */
-
-@media (max-width: 1199px) {
+/* Small laptop */
+@media (min-width: 1024px) and (max-width: 1199px) {
   .navbarContainer {
     width: calc(100% - 2.5rem);
-    max-width: none;
   }
 
   .navigation {
@@ -307,16 +318,10 @@
   .consultationButton {
     padding-inline: 1.15rem;
   }
-
-  .logoText {
-    font-size: 1.7rem;
-  }
 }
 
-/* TABLET LANDSCAPE
-   901px - 1023px */
-
-@media (max-width: 1023px) {
+/* Tablet landscape */
+@media (min-width: 769px) and (max-width: 1023px) {
   .navbarContainer {
     width: calc(100% - 2.5rem);
   }
@@ -333,41 +338,56 @@
     padding: 0.7rem 1rem;
     font-size: 0.82rem;
   }
+
+  .logoMark {
+    width: 5rem;
+    height: 5rem;
+
+    min-width: 5rem;
+    min-height: 5rem;
+
+    flex-basis: 5rem;
+  }
 }
 
-/* TABLET / MOBILE NAVIGATION
-   768px and below */
-
+/* Tablet and mobile */
 @media (max-width: 768px) {
   .navbar {
-    padding: 0.85rem 0;
+    padding: 0.65rem 0;
   }
 
   .navbarContainer {
     width: calc(100% - 2rem);
+    min-height: 4.5rem;
+  }
 
-    min-height: 3rem;
+  .logoMark {
+    width: 4.5rem;
+    height: 4.5rem;
+
+    min-width: 4.5rem;
+    min-height: 4.5rem;
+
+    flex: 0 0 4.5rem;
   }
 
   .menuButton {
     display: inline-flex;
+
+    width: 2.75rem;
+    height: 2.75rem;
+
+    flex-basis: 2.75rem;
   }
 
   .navigation {
     position: absolute;
 
     top: calc(100% + 0.5rem);
-
     right: 1rem;
     left: 1rem;
 
-    width: auto;
-    max-width: none;
-
     display: flex;
-
-    visibility: hidden;
-
     flex-direction: column;
     align-items: stretch;
 
@@ -382,11 +402,15 @@
 
     backdrop-filter: blur(1.25rem);
     -webkit-backdrop-filter: blur(1.25rem);
+
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
 
+    visibility: hidden;
     opacity: 0;
 
     transform: translateY(-0.75rem);
+
+    pointer-events: none;
 
     transition:
       opacity 200ms ease,
@@ -398,10 +422,11 @@
 
   .navigationOpen {
     visibility: visible;
-
     opacity: 1;
 
     transform: translateY(0);
+
+    pointer-events: auto;
   }
 
   .navigationLink {
@@ -413,12 +438,13 @@
 
     padding: 0.9rem 1rem;
 
-    font-size: 0.95rem;
-
     border-radius: 0.65rem;
+
+    font-size: 0.95rem;
   }
 
-  .navigationLink:hover {
+  .navigationLink:hover,
+  .navigationLink:focus-visible {
     background: rgba(255, 255, 255, 0.05);
   }
 
@@ -439,11 +465,9 @@
 
     width: 100%;
     min-width: 0;
-
     max-height: 320px;
 
     margin-top: 0.35rem;
-
     padding: 0.5rem;
 
     transform: none;
@@ -462,24 +486,20 @@
   }
 }
 
-/* LARGE MOBILE
-   481px - 600px */
-
-@media (max-width: 600px) {
+/* Large mobile */
+@media (min-width: 481px) and (max-width: 600px) {
   .navbarContainer {
     width: calc(100% - 1.5rem);
   }
 
-  .logo {
-    gap: 0.45rem;
-  }
   .logoMark {
-    width: 5rem;
-    height: 5rem;
-  }
+    width: 4rem;
+    height: 4rem;
 
-  .logoText {
-    font-size: clamp(1.4rem, 6vw, 1.7rem);
+    min-width: 4rem;
+    min-height: 4rem;
+
+    flex-basis: 4rem;
   }
 
   .navigation {
@@ -488,36 +508,32 @@
   }
 }
 
-/* MOBILE
-   481px and below */
-
+/* Mobile */
 @media (max-width: 480px) {
   .navbar {
-    padding: 0.75rem 0;
+    padding: 0.6rem 0;
   }
 
   .navbarContainer {
     width: calc(100% - 1.25rem);
-
-    min-height: 2.9rem;
-  }
-
-  .logo {
-    gap: 0.4rem;
+    min-height: 3.75rem;
   }
 
   .logoMark {
-    width: 1.75rem;
-    height: 1.75rem;
-  }
+    width: 3.5rem;
+    height: 3.5rem;
 
-  .logoText {
-    font-size: clamp(1.3rem, 6.5vw, 1.6rem);
+    min-width: 3.5rem;
+    min-height: 3.5rem;
+
+    flex: 0 0 3.5rem;
   }
 
   .menuButton {
     width: 2.6rem;
     height: 2.6rem;
+
+    flex-basis: 2.6rem;
 
     border-radius: 0.7rem;
 
@@ -568,30 +584,27 @@
   }
 }
 
-/* VERY SMALL PHONES
-   360px and below */
-
+/* Very small phones */
 @media (max-width: 360px) {
   .navbarContainer {
     width: calc(100% - 1rem);
   }
 
-  .logo {
-    gap: 0.3rem;
-  }
-
   .logoMark {
-    width: 1.6rem;
-    height: 1.6rem;
-  }
+    width: 3.25rem;
+    height: 3.25rem;
 
-  .logoText {
-    font-size: 1.3rem;
+    min-width: 3.25rem;
+    min-height: 3.25rem;
+
+    flex-basis: 3.25rem;
   }
 
   .menuButton {
     width: 2.45rem;
     height: 2.45rem;
+
+    flex-basis: 2.45rem;
 
     font-size: 1.6rem;
   }
@@ -616,26 +629,27 @@
   }
 }
 
-/* EXTRA SMALL PHONES
-   320px and below */
-
+/* Extra small phones */
 @media (max-width: 320px) {
   .navbarContainer {
     width: calc(100% - 0.75rem);
   }
 
-  .logoText {
-    font-size: 1.2rem;
-  }
-
   .logoMark {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+
+    min-width: 3rem;
+    min-height: 3rem;
+
+    flex-basis: 3rem;
   }
 
   .menuButton {
     width: 2.35rem;
     height: 2.35rem;
+
+    flex-basis: 2.35rem;
   }
 
   .navigation {
@@ -644,8 +658,7 @@
   }
 }
 
-/* TOUCH DEVICES */
-
+/* Touch devices */
 @media (hover: none) and (pointer: coarse) {
   .navigationLink:hover {
     color: rgba(255, 255, 255, 0.88);
@@ -666,8 +679,7 @@
   }
 }
 
-/* REDUCED MOTION */
-
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .navigation,
   .dropdownMenu,

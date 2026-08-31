@@ -23,26 +23,27 @@ function Navbar() {
     setIsMenuOpen((previousState) => !previousState);
   };
 
-  // Handles normal navigation links
+  // Handles navigation links
   const handleNavigation = (
     event: React.MouseEvent<HTMLAnchorElement>,
-    href: string
+    href: string,
   ) => {
-    // External links
+    // Allows external links to work normally
     if (href.startsWith("http")) {
       return;
     }
 
-    // Portfolio route
+    // Allows route navigation to work normally
     if (href === "/portfolio") {
+      setIsMenuOpen(false);
       return;
     }
 
-    // Section links
+    // Handles homepage section links
     if (href.startsWith("#")) {
       event.preventDefault();
 
-      // If already on homepage, scroll directly
+      // Scrolls directly when already on homepage
       if (location.pathname === "/") {
         const section = document.querySelector(href);
 
@@ -57,18 +58,16 @@ function Navbar() {
         return;
       }
 
-      // If on another page, go to homepage first
+      // Navigates to homepage section from another page
       window.location.href = `/${href}`;
     }
   };
 
-  // Handles logo navigation to Hero section
-  const handleLogoClick = (
-    event: React.MouseEvent<HTMLAnchorElement>
-  ) => {
+  // Handles logo navigation
+  const handleLogoClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
 
-    // If already on homepage, smoothly scroll to Hero
+    // Scrolls to hero when already on homepage
     if (location.pathname === "/") {
       const heroSection = document.querySelector("#hero");
 
@@ -83,44 +82,46 @@ function Navbar() {
       return;
     }
 
-    // If on another page, navigate to homepage Hero
+    // Navigates to homepage hero from another page
     window.location.href = "/#hero";
   };
 
-  // Calendly should ONLY be used for the consultation button
+  // Opens consultation booking page
   const handleBookConsultation = () => {
     window.open(
       "https://calendly.com/prashantsocialmeup/30min",
       "_blank",
-      "noopener,noreferrer"
+      "noopener,noreferrer",
     );
   };
 
+  // Closes mobile menu after route changes
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location.pathname]);
 
   return (
     <header className={styles.navbar}>
+      {" "}
       <div className={styles.navbarContainer}>
-        {/* Logo */}
+        {/* Logo */}{" "}
         <a
           href="#hero"
           className={styles.logo}
           aria-label="SocialMeUp home"
           onClick={handleLogoClick}
         >
-          <span className={styles.logoMark} aria-hidden="true">
+          {" "}
+          <span className={styles.logoMark}>
+            {" "}
             <img
               src="/Logo.webp"
-              alt="SocialMeUp-logo"
-              className="logo"
+              alt="SocialMeUp logo"
               width={1234}
               height={1275}
-            />
-          </span>
+            />{" "}
+          </span>{" "}
         </a>
-
         {isHome ? (
           <>
             {/* Navigation */}
@@ -136,15 +137,13 @@ function Navbar() {
                   key={link.label}
                   href={link.href}
                   className={styles.navigationLink}
-                  onClick={(event) =>
-                    handleNavigation(event, link.href)
-                  }
+                  onClick={(event) => handleNavigation(event, link.href)}
                 >
                   {link.label}
                 </a>
               ))}
 
-              {/* Consultation Button */}
+              {/* Consultation button */}
               <button
                 type="button"
                 className={styles.consultationButton}
@@ -154,15 +153,13 @@ function Navbar() {
               </button>
             </nav>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile menu button */}
             <button
               type="button"
               className={styles.menuButton}
               onClick={handleMenuToggle}
               aria-label={
-                isMenuOpen
-                  ? "Close navigation menu"
-                  : "Open navigation menu"
+                isMenuOpen ? "Close navigation menu" : "Open navigation menu"
               }
               aria-expanded={isMenuOpen}
               aria-controls="main-navigation"
