@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaWhatsapp, FaTimes } from "react-icons/fa";
-import styles from "./WhatsAppFloat.module.css";
+import styles from "./WhatsappFloat.module.css";
 
 const WHATSAPP_NUMBER = "918004857390";
 
@@ -28,6 +28,7 @@ function WhatsAppFloat() {
           onClick={openWhatsApp}
           onKeyDown={(event) => {
             if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
               openWhatsApp();
             }
           }}
@@ -49,7 +50,7 @@ function WhatsAppFloat() {
           </div>
 
           <div className={styles.popupContent}>
-            <strong>Chat with us on WhatsApp</strong>
+            <strong>How may help you?</strong>
             <span>We're here to help!</span>
           </div>
         </div>
