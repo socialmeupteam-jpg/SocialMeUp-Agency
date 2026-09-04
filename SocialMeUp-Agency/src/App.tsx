@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
-
+import WhatsAppFloat from "./components/WhatsappFloat/WhatsappFloat";
 const Home = lazy(() => import("./pages/Home/Home"));
 const Portfolio = lazy(() => import("./pages/Portfolio/Portfolio"));
 const PrivacyPolicy = lazy(() => import("./pages/Privacy/PrivacyPolicy"));
@@ -13,7 +13,13 @@ function App() {
   return (
     <>
       <ScrollToTop />
-      <Suspense fallback={<main aria-busy="true"><p>Loading...</p></main>}>
+      <Suspense
+        fallback={
+          <main aria-busy="true">
+            <p>Loading...</p>
+          </main>
+        }
+      >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/portfolio" element={<Portfolio />} />
@@ -24,6 +30,8 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Suspense>
+
+      <WhatsAppFloat />
     </>
   );
 }

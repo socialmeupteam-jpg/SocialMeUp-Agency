@@ -2,6 +2,7 @@ import suryaEyeCareImage from "/portfolio/websites/surya-eye-care.webp";
 import ivInvestmentPartnersImage from "/portfolio/websites/iv-investment-partners.webp";
 import careerGuruEducationImage from "/portfolio/websites/career-guru-education.webp";
 import socialmeupAcademyImage from "/portfolio/websites/socialmeup-academy.webp";
+import theMomentsCapturerImage from "/portfolio/websites/the-moments-capturer.webp";
 import zomeStaysImage from "/portfolio/logos/zome-stays.webp";
 import threadFusionImage from "/portfolio/logos/thread-fusion.webp";
 import Reel1Image from "/portfolio/Reels/Reel-1.webp";
@@ -17,6 +18,7 @@ import project2Image from "/portfolio/SocialMedia/project-2.webp";
 import project3Image from "/portfolio/SocialMedia/project-3.webp";
 import project4Image from "/portfolio/SocialMedia/project-4.webp";
 import project5Image from "/portfolio/SocialMedia/project-5.webp";
+import project6Image from "/portfolio/SocialMedia/project-6.webp";
 
 
 
@@ -129,11 +131,31 @@ export const portfolioProjects: PortfolioProject[] = [
       "Digital Marketing",
     ],
   },
+  {
+    id: 5,
+    category: "Websites",
+    client: "THE MOMENTS CAPTURER",
+    title: "Photography Website",
+    description:
+      "A modern photography portfolio website designed to showcase the work of The Moments Capturer.",
+    image: theMomentsCapturerImage,
+    link: "https://themomentscapturer.com/",
+    stats: [
+      "Portfolio-focused platform",
+      "Visual storytelling",
+      "Client-focused experience",
+    ],
+    technologies: [
+      "Web Design",
+      "Responsive UI",
+      "Photography",
+    ],
+  },
 
   // Logos
 
   {
-    id: 5,
+    id: 6,
     category: "Logos",
     client: "ZOME STAYS",
     title: "Hospitality Brand Logo",
@@ -154,7 +176,7 @@ export const portfolioProjects: PortfolioProject[] = [
   },
 
   {
-    id: 6,
+    id: 7,
     category: "Logos",
     client: "THREAD FUSION",
     title: "Fashion Brand Logo",
@@ -178,7 +200,7 @@ export const portfolioProjects: PortfolioProject[] = [
   // Reels & Videos
 
   {
-    id: 7,
+    id: 8,
     category: "Reels & Videos",
     client: "SUNROOF TECHNO",
     title: "Technology Brand Reel",
@@ -199,7 +221,7 @@ export const portfolioProjects: PortfolioProject[] = [
   },
 
   {
-    id: 8,
+    id: 9,
     category: "Reels & Videos",
     client: "BN BAIJAL",
     title: "Owner History Reel",
@@ -220,7 +242,7 @@ export const portfolioProjects: PortfolioProject[] = [
   },
 
   {
-    id: 9,
+    id: 10,
     category: "Reels & Videos",
     client: "ZOME STAYS",
     title: "Client Testimonial Reel",
@@ -241,7 +263,7 @@ export const portfolioProjects: PortfolioProject[] = [
   },
 
   {
-    id: 10,
+    id: 11,
     category: "Reels & Videos",
     client: "BN Baijal",
     title: "Influencer Reel",
@@ -262,7 +284,7 @@ export const portfolioProjects: PortfolioProject[] = [
   },
 
   {
-    id: 11,
+    id: 12,
     category: "Reels & Videos",
     client: "SOCIALMEUP ACADEMY",
     title: "Influencer Shoot",
@@ -281,7 +303,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Reels",
     ],
   }, {
-    id: 12,
+    id: 13,
     category: "Reels & Videos",
     client: "BN Baijal",
     title: "Client Testimonial",
@@ -298,8 +320,8 @@ export const portfolioProjects: PortfolioProject[] = [
       "Video Editing",
     ],
   },
- {
-    id: 13,
+  {
+    id: 14,
     category: "Reels & Videos",
     client: "BN Baijal",
     title: "Emotional story",
@@ -317,34 +339,34 @@ export const portfolioProjects: PortfolioProject[] = [
     ],
   },
 
- {
-  id: 14,
-  category: "Reels & Videos",
-  client: "SocialMeUp Agency",
-  title: "BTS Shoot",
-  description:
-    "A behind-the-scenes reel capturing the energy, creativity, and production process behind a SocialMeUp Agency shoot. The content was crafted to showcase the brand's creative approach while giving the audience an authentic look into the making of the final production.",
-  image: Reel8Image,
-  link: "https://www.instagram.com/reel/DcWBp1pq0Po/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
-  stats: [
-    "Behind-the-scenes production",
-    "Authentic brand storytelling",
-    "Short-form video content",
-    "Social media engagement",
-  ],
-  technologies: [
-    "Reels",
-    "Video Editing",
-    "Content Production",
-    "Short-form Storytelling",
-  ],
-},
+  {
+    id: 15,
+    category: "Reels & Videos",
+    client: "SocialMeUp Agency",
+    title: "BTS Shoot",
+    description:
+      "A behind-the-scenes reel capturing the energy, creativity, and production process behind a SocialMeUp Agency shoot. The content was crafted to showcase the brand's creative approach while giving the audience an authentic look into the making of the final production.",
+    image: Reel8Image,
+    link: "https://www.instagram.com/reel/DcWBp1pq0Po/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
+    stats: [
+      "Behind-the-scenes production",
+      "Authentic brand storytelling",
+      "Short-form video content",
+      "Social media engagement",
+    ],
+    technologies: [
+      "Reels",
+      "Video Editing",
+      "Content Production",
+      "Short-form Storytelling",
+    ],
+  },
 
 
   // Social Media
 
   {
-    id: 15,
+    id: 16,
     category: "Social Media",
     client: "SUNROOF TECHNO",
     title: "Technology Social Media Campaign",
@@ -365,7 +387,7 @@ export const portfolioProjects: PortfolioProject[] = [
   },
 
   {
-    id: 16,
+    id: 17,
     category: "Social Media",
     client: "SUNROOF TECHNO",
     title: "Branded Instagram Creative",
@@ -386,7 +408,7 @@ export const portfolioProjects: PortfolioProject[] = [
   },
 
   {
-    id: 17,
+    id: 18,
     category: "Social Media",
     client: "SUNROOF TECHNO",
     title: "Promotional Social Creative",
@@ -407,7 +429,7 @@ export const portfolioProjects: PortfolioProject[] = [
   },
 
   {
-    id: 18,
+    id: 19,
     category: "Social Media",
     client: "BN BAIJAL",
     title: "Branded Instagram Creative",
@@ -426,47 +448,49 @@ export const portfolioProjects: PortfolioProject[] = [
       "Branding",
     ],
   },
-{
-  id: 19,
-  category: "Social Media",
-  client: "BN BAIJAL",
-  title: "Brand Testimonial Instagram Creative",
-  description:
-    "A professionally crafted Instagram testimonial creative for BN Baijal, designed to communicate client trust and brand credibility through a clean, engaging visual layout. The creative combines testimonial-led messaging with strong brand presentation to build social proof and audience confidence.",
-  image: project5Image,
-  link: "https://www.instagram.com/p/DLXW-Rgh0b1/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
-  stats: [
-    "Testimonial-led content",
-    "Brand credibility & social proof",
-    "Engagement-focused design",
-    "Instagram-ready creative",
-  ],
-  technologies: [
-    "Social Media Design",
-    "Graphic Design",
-    "Branding",
-    "Content Strategy",
-  ],
-},
-];
+  {
+    id: 20,
+    category: "Social Media",
+    client: "BN BAIJAL",
+    title: "Brand Testimonial Instagram Creative",
+    description:
+      "A professionally crafted Instagram testimonial creative for BN Baijal, designed to communicate client trust and brand credibility through a clean, engaging visual layout.",
+    image: project5Image,
+    link: "https://www.instagram.com/p/DLXW-Rgh0b1/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
+    stats: [
+      "Testimonial-led content",
+      "Brand credibility & social proof",
+      "Engagement-focused design",
+      "Instagram-ready creative",
+    ],
+    technologies: [
+      "Social Media Design",
+      "Graphic Design",
+      "Branding",
+      "Content Strategy",
+    ],
+  },
+  {
+    id: 21,
+    category: "Social Media",
+    client: "SUNROOF TECHNO",
+    title: "Outdoor Marketing Instagram Creative",
+    description:
+      "A professionally crafted Instagram creative for SUNROOF TECHNO, designed to communicate the brand's outdoor marketing message through visually engaging content suitable for social media audiences.",
+    image: project6Image,
+    link: "https://www.instagram.com/p/DcvqlelDloQ/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
+    stats: [
+      "Outdoor marketing content",
+      "Engagement-focused design",
+      "Instagram-ready creative",
+    ],
+    technologies: [
+      "Social Media Design",
+      "Graphic Design",
+      "Outdoor Marketing",
+    ],
+  },
 
-export const portfolioStats: PortfolioStat[] = [
-  {
-    value: "150+",
-    label: "Projects Delivered",
-  },
-  {
-    value: "50M+",
-    label: "Total Views Generated",
-  },
-  {
-    value: "₹10Cr+",
-    label: "Revenue Generated",
-  },
-  {
-    value: "95%",
-    label: "Client Satisfaction",
-  },
 ];
 
 export const portfolioCategories: PortfolioCategory[] = [

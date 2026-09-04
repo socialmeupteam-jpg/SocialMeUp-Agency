@@ -1,0 +1,335 @@
+.wrapper {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+
+  pointer-events: none;
+}
+
+/* ================================
+   POPUP
+================================ */
+
+.popup {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: 260px;
+  padding: 14px 38px 14px 14px;
+
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.12),
+    0 3px 10px rgba(0, 0, 0, 0.06);
+
+  cursor: pointer;
+
+  pointer-events: auto;
+
+  animation: popupEnter 0.35s ease-out;
+}
+
+.popup::after {
+  content: "";
+
+  position: absolute;
+  right: 20px;
+  bottom: -8px;
+
+  width: 16px;
+  height: 16px;
+
+  background: #ffffff;
+
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+  transform: rotate(45deg);
+}
+
+.popup:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.15),
+    0 4px 12px rgba(0, 0, 0, 0.07);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* WhatsApp icon inside popup */
+
+.popupIcon {
+  flex-shrink: 0;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #25d366;
+  color: #ffffff;
+
+  font-size: 23px;
+}
+
+.popupContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  min-width: 0;
+}
+
+.popupContent strong {
+  color: #172033;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.popupContent span {
+  color: #687386;
+
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* Close button */
+
+.closeButton {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: rgba(20, 30, 50, 0.06);
+  color: #687386;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  z-index: 2;
+
+  pointer-events: auto;
+}
+
+.closeButton:hover {
+  background: rgba(20, 30, 50, 0.12);
+  color: #172033;
+}
+
+/* ================================
+   FLOATING WHATSAPP BUTTON
+================================ */
+
+.floatingButton {
+  position: relative;
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #25d366;
+  color: #ffffff;
+
+  box-shadow:
+    0 10px 25px rgba(37, 211, 102, 0.28),
+    0 4px 10px rgba(0, 0, 0, 0.12);
+
+  cursor: pointer;
+
+  pointer-events: auto;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.floatingButton:hover {
+  transform: translateY(-4px) scale(1.04);
+
+  box-shadow:
+    0 14px 32px rgba(37, 211, 102, 0.35),
+    0 5px 14px rgba(0, 0, 0, 0.14);
+}
+
+.floatingButton:active {
+  transform: scale(0.96);
+}
+
+.whatsappIcon {
+  position: relative;
+  z-index: 2;
+
+  width: 31px;
+  height: 31px;
+}
+
+/* ================================
+   PULSE EFFECT
+================================ */
+
+.pulse {
+  position: absolute;
+  inset: 0;
+
+  border-radius: 50%;
+
+  border: 2px solid #25d366;
+
+  opacity: 0;
+
+  animation: whatsappPulse 2.2s infinite;
+}
+
+/* ================================
+   ANIMATIONS
+================================ */
+
+@keyframes whatsappPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+
+  70% {
+    transform: scale(1.45);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.45);
+    opacity: 0;
+  }
+}
+
+@keyframes popupEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 768px) {
+  .wrapper {
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .popup {
+    width: 240px;
+  }
+
+  .floatingButton {
+    width: 54px;
+    height: 54px;
+  }
+
+  .whatsappIcon {
+    width: 29px;
+    height: 29px;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 480px) {
+  .wrapper {
+    right: 14px;
+    bottom: 14px;
+    gap: 10px;
+  }
+
+  .popup {
+    width: min(250px, calc(100vw - 40px));
+
+    padding: 12px 36px 12px 12px;
+
+    border-radius: 13px;
+  }
+
+  .popupIcon {
+    width: 38px;
+    height: 38px;
+
+    font-size: 20px;
+  }
+
+  .popupContent strong {
+    font-size: 13px;
+  }
+
+  .popupContent span {
+    font-size: 11px;
+  }
+
+  .floatingButton {
+    width: 52px;
+    height: 52px;
+  }
+
+  .whatsappIcon {
+    width: 27px;
+    height: 27px;
+  }
+}
+
+/* ================================
+   REDUCED MOTION
+================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .popup,
+  .floatingButton,
+  .pulse {
+    animation: none;
+    transition: none;
+  }
+}
