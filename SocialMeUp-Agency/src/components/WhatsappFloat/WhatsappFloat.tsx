@@ -27,7 +27,10 @@ function WhatsAppFloat() {
           tabIndex={0}
           onClick={openWhatsApp}
           onKeyDown={(event) => {
-            if (event.key === "Enter" || event.key === " ") {
+            if (
+              event.target === event.currentTarget &&
+              (event.key === "Enter" || event.key === " ")
+            ) {
               event.preventDefault();
               openWhatsApp();
             }
@@ -49,8 +52,8 @@ function WhatsAppFloat() {
             <FaWhatsapp />
           </div>
 
-          <div className={styles.popupContent}>
-            <strong>How may help you?</strong>
+              <div className={styles.popupContent}>
+            <strong>How may we help you?</strong>
             <span>We're here to help!</span>
           </div>
         </div>

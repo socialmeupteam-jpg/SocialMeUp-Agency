@@ -265,7 +265,7 @@ export const portfolioProjects: PortfolioProject[] = [
   {
     id: 11,
     category: "Reels & Videos",
-    client: "BN Baijal",
+    client: "BN BAIJAL",
     title: "Influencer Reel",
     description:
       "Creative promotional influencer shoot video content produced for social media, combining product-focused visuals, editing and motion to create an engaging short-form experience.",
@@ -305,10 +305,10 @@ export const portfolioProjects: PortfolioProject[] = [
   }, {
     id: 13,
     category: "Reels & Videos",
-    client: "BN Baijal",
+    client: "BN BAIJAL",
     title: "Client Testimonial",
     description:
-      "A client testimonial reel created for BN Baijal to communicate the client experience through engaging visuals and short-form storytelling.",
+      "A client testimonial reel created for BN BAIJAL to communicate the client experience through engaging visuals and short-form storytelling.",
     image: Reel6Image,
     link: "https://www.instagram.com/reel/DLH2k28Clo1/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
     stats: [
@@ -323,10 +323,10 @@ export const portfolioProjects: PortfolioProject[] = [
   {
     id: 14,
     category: "Reels & Videos",
-    client: "BN Baijal",
+    client: "BN BAIJAL",
     title: "Emotional story",
     description:
-      "An emotional storytelling reel created for BN Baijal to express the emotions and showcase the trust through engaging heart-touching visuals and short-form storytelling.",
+      "An emotional storytelling reel created for BN BAIJAL to express the emotions and showcase the trust through engaging heart-touching visuals and short-form storytelling.",
     image: Reel7Image,
     link: "https://www.instagram.com/reel/DLKcr5jMCwU/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
     stats: [
@@ -434,7 +434,7 @@ export const portfolioProjects: PortfolioProject[] = [
     client: "BN BAIJAL",
     title: "Branded Instagram Creative",
     description:
-      "A professionally designed Instagram creative for BN Baijal, combining visual communication and brand presentation for social media.",
+      "A professionally designed Instagram creative for BN BAIJAL, combining visual communication and brand presentation for social media.",
     image: project4Image,
     link: "https://www.instagram.com/p/DLFRnEapPBk/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
     stats: [
@@ -454,7 +454,7 @@ export const portfolioProjects: PortfolioProject[] = [
     client: "BN BAIJAL",
     title: "Brand Testimonial Instagram Creative",
     description:
-      "A professionally crafted Instagram testimonial creative for BN Baijal, designed to communicate client trust and brand credibility through a clean, engaging visual layout.",
+      "A professionally crafted Instagram testimonial creative for BN BAIJAL, designed to communicate client trust and brand credibility through a clean, engaging visual layout.",
     image: project5Image,
     link: "https://www.instagram.com/p/DLXW-Rgh0b1/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
     stats: [
@@ -490,7 +490,6 @@ export const portfolioProjects: PortfolioProject[] = [
       "Outdoor Marketing",
     ],
   },
-
 ];
 
 export const portfolioCategories: PortfolioCategory[] = [
