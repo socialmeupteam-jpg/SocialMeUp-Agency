@@ -108,7 +108,7 @@ function Footer() {
               </li>
 
               <li>
-                <Link to="/#portfolio">Portfolio</Link>
+                <Link to="/portfolio">Portfolio</Link>
               </li>
 
               <li>
@@ -116,7 +116,13 @@ function Footer() {
               </li>
 
               <li>
-                <Link to="/#academy">Academy</Link>
+                <a
+                  href="https://socialmeupacademy.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Academy
+                </a>
               </li>
             </ul>
           </div>

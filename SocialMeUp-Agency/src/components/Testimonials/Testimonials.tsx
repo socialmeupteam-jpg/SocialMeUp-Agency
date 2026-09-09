@@ -70,7 +70,11 @@ function DeferredTestimonialCarousel() {
 
 function Testimonials() {
   return (
-    <section className={styles.testimonials} id="testimonials">
+    <section
+      className={styles.testimonials}
+      id="testimonials"
+      aria-labelledby="testimonials-heading"
+    >
       <div className={styles.testimonialGlow} />
       <div className={styles.container}>
         <div className={styles.container}>
@@ -86,7 +90,7 @@ function Testimonials() {
 
             <motion.h2
               variants={fadeUp}
-              id="industries-heading"
+              id="testimonials-heading"
               className={styles.heading}
             >
               Trusted by

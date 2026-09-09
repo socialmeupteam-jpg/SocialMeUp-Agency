@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { FiMenu, FiX, FiArrowLeft } from "react-icons/fi";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import styles from "./Navbar.module.css";
 
@@ -16,8 +16,26 @@ const navigationLinks = [
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const navigate = useNavigate();
   const location = useLocation();
   const isHome = location.pathname === "/";
+
+  // Helper to scroll smoothly to a section by element ID
+  const scrollToSectionId = (target: string) => {
+    const cleanId = target.replace(/^#/, "");
+    const section =
+      document.getElementById(cleanId) ||
+      document.querySelector(`#${CSS.escape(cleanId)}`);
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+      return true;
+    }
+    return false;
+  };
 
   const handleMenuToggle = () => {
     setIsMenuOpen((previousState) => !previousState);
@@ -45,21 +63,14 @@ function Navbar() {
 
       // Scrolls directly when already on homepage
       if (location.pathname === "/") {
-        const section = document.querySelector(href);
-
-        if (section) {
-          section.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }
-
+        scrollToSectionId(href);
         setIsMenuOpen(false);
         return;
       }
 
-      // Navigates to homepage section from another page
-      window.location.href = `/${href}`;
+      // Navigates to homepage section from another page using React Router
+      setIsMenuOpen(false);
+      navigate(`/${href}`, { state: { scrollTo: href } });
     }
   };
 
@@ -69,21 +80,14 @@ function Navbar() {
 
     // Scrolls to hero when already on homepage
     if (location.pathname === "/") {
-      const heroSection = document.querySelector("#hero");
-
-      if (heroSection) {
-        heroSection.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      }
-
+      scrollToSectionId("hero");
       setIsMenuOpen(false);
       return;
     }
 
-    // Navigates to homepage hero from another page
-    window.location.href = "/#hero";
+    // Navigates to homepage hero from another page using React Router
+    setIsMenuOpen(false);
+    navigate("/", { state: { scrollTo: "#hero" } });
   };
 
   // Opens consultation booking page
@@ -99,6 +103,40 @@ function Navbar() {
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location.pathname]);
+
+  // Handles smooth scrolling to target section when navigating from another route
+  useEffect(() => {
+    if (location.pathname !== "/") {
+      return;
+    }
+
+    const stateTarget = (location.state as { scrollTo?: string } | null)
+      ?.scrollTo;
+    const target = stateTarget || location.hash;
+
+    if (!target) {
+      return;
+    }
+
+    let attempts = 0;
+    const maxAttempts = 30;
+    let timerId: ReturnType<typeof setTimeout>;
+
+    const tryScroll = () => {
+      const scrolled = scrollToSectionId(target);
+      if (!scrolled && attempts < maxAttempts) {
+        attempts++;
+        timerId = setTimeout(tryScroll, 50);
+      }
+    };
+
+    // Small initial delay to let React mount the route and ScrollToTop complete
+    timerId = setTimeout(tryScroll, 100);
+
+    return () => {
+      clearTimeout(timerId);
+    };
+  }, [location.pathname, location.hash, location.state]);
 
   return (
     <header className={styles.navbar}>
