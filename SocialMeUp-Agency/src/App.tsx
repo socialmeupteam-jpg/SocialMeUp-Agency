@@ -2,6 +2,8 @@ import { lazy, Suspense } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import WhatsAppFloat from "./components/WhatsappFloat/WhatsappFloat";
+import "./styles/loader.css";
+
 const Home = lazy(() => import("./pages/Home/Home"));
 const Portfolio = lazy(() => import("./pages/Portfolio/Portfolio"));
 const PrivacyPolicy = lazy(() => import("./pages/Privacy/PrivacyPolicy"));
@@ -13,11 +15,18 @@ function App() {
   return (
     <>
       <ScrollToTop />
+
       <Suspense
         fallback={
-          <main aria-busy="true">
-            <p>Loading...</p>
-          </main>
+          <div className="page-loader" aria-label="Loading SocialMeUp">
+            <div className="loader-logo-wrapper">
+              <img
+                src="/Logo.webp"
+                alt="SocialMeUp"
+                className="loader-logo"
+              />
+            </div>
+          </div>
         }
       >
         <Routes>

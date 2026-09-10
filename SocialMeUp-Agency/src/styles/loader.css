@@ -1,0 +1,82 @@
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(77, 98, 255, 0.08) 0%,
+      rgba(77, 98, 255, 0.03) 35%,
+      transparent 65%
+    ),
+    #090b13;
+
+  overflow: hidden;
+}
+
+.loader-logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 22px 30px;
+  border-radius: 18px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(77, 98, 255, 0.12),
+    rgba(241, 91, 125, 0.08)
+  );
+
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.25),
+    0 0 35px rgba(77, 98, 255, 0.08);
+
+  animation: loaderFade 0.8s ease-in-out infinite alternate;
+}
+
+.loader-logo {
+  display: block;
+
+  width: 180px;
+  height: auto;
+
+  object-fit: contain;
+}
+
+/* Very subtle animation */
+@keyframes loaderFade {
+  from {
+    opacity: 0.82;
+    transform: scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .loader-logo-wrapper {
+    padding: 18px 24px;
+    border-radius: 15px;
+  }
+
+  .loader-logo {
+    width: 145px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .loader-logo-wrapper {
+    animation: none;
+  }
+}
