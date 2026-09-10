@@ -27,16 +27,6 @@
   padding: 22px 30px;
   border-radius: 18px;
 
-  background: linear-gradient(
-    135deg,
-    rgba(77, 98, 255, 0.12),
-    rgba(241, 91, 125, 0.08)
-  );
-
-  box-shadow:
-    0 10px 40px rgba(0, 0, 0, 0.25),
-    0 0 35px rgba(77, 98, 255, 0.08);
-
   animation: loaderFade 0.8s ease-in-out infinite alternate;
 }
 
