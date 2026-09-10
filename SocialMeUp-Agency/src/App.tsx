@@ -18,7 +18,11 @@ function App() {
 
       <Suspense
         fallback={
-          <div className="page-loader" aria-label="Loading SocialMeUp">
+          <div
+            className="page-loader"
+            role="status"
+            aria-label="Loading SocialMeUp"
+          >
             <div className="loader-logo-wrapper">
               <img
                 src="/Logo.webp"
