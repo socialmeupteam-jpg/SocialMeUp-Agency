@@ -1,11 +1,73 @@
 import { FiMessageCircle, FiSend } from "react-icons/fi";
+import { useState, type FormEvent } from "react";
 
 import styles from "./BlogComments.module.css";
-import type { FormEvent } from "react";
 
-const BlogComments = () => {
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+interface BlogCommentsProps {
+  blogTitle?: string;
+}
+
+const BlogComments = ({ blogTitle = "SocialMeUp Blog" }: BlogCommentsProps) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [comment, setComment] = useState("");
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
+    setMessage("");
+
+    if (!name.trim() || !email.trim() || !comment.trim()) {
+      setMessage("Please fill in all required fields.");
+      return;
+    }
+
+    try {
+      setIsSubmitting(true);
+
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/blog-comments`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: name.trim(),
+            email: email.trim(),
+            comment: comment.trim(),
+            blogTitle,
+          }),
+        }
+      );
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Failed to submit comment.");
+      }
+
+      setMessage(
+        "Thank you! Your comment has been submitted successfully."
+      );
+
+      setName("");
+      setEmail("");
+      setComment("");
+    } catch (error) {
+      console.error("Comment submission error:", error);
+
+      setMessage(
+        error instanceof Error
+          ? error.message
+          : "Something went wrong. Please try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -25,16 +87,29 @@ const BlogComments = () => {
         <div className={styles.row}>
           <div className={styles.field}>
             <label htmlFor="name">Name *</label>
-            <input id="name" type="text" placeholder="Your name" required />
+
+            <input
+              id="name"
+              type="text"
+              placeholder="Your name"
+              value={name}
+              onChange={(event) => setName(event.target.value)}
+              required
+              disabled={isSubmitting}
+            />
           </div>
 
           <div className={styles.field}>
             <label htmlFor="email">Email *</label>
+
             <input
               id="email"
               type="email"
               placeholder="you@example.com"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
               required
+              disabled={isSubmitting}
             />
           </div>
         </div>
@@ -46,13 +121,35 @@ const BlogComments = () => {
             id="comment"
             placeholder="Share your thoughts..."
             rows={4}
+            value={comment}
+            onChange={(event) => setComment(event.target.value)}
             required
+            disabled={isSubmitting}
           />
         </div>
 
-        <button type="submit" className={styles.submit}>
+        {message && (
+          <p
+            className={
+              message.includes("successfully")
+                ? styles.successMessage
+                : styles.errorMessage
+            }
+          >
+            {message}
+          </p>
+        )}
+
+        <button
+          type="submit"
+          className={styles.submit}
+          disabled={isSubmitting}
+        >
           <FiSend size={14} />
-          <span>Submit Comment</span>
+
+          <span>
+            {isSubmitting ? "Sending..." : "Submit Comment"}
+          </span>
         </button>
       </form>
     </section>

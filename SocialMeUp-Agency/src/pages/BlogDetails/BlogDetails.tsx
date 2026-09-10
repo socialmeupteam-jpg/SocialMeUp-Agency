@@ -60,8 +60,8 @@ const BlogDetails = () => {
             </aside>
           </div>
 
-          <BlogComments />
-
+          <BlogComments blogTitle={blog.title} />
+          
           <RelatedBlogs blogs={blog.relatedBlogs} />
         </div>
       </main>
