@@ -8,19 +8,27 @@ interface BlogCommentsProps {
 }
 
 const BlogComments = ({ blogTitle = "SocialMeUp Blog" }: BlogCommentsProps) => {
+  const API_URL = import.meta.env.VITE_API_URL || "https://api.socialmeup.in";
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [comment, setComment] = useState("");
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState("");
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     setMessage("");
+    setIsSuccess(false);
 
-    if (!name.trim() || !email.trim() || !comment.trim()) {
+    const cleanName = name.trim();
+    const cleanEmail = email.trim();
+    const cleanComment = comment.trim();
+
+    if (!cleanName || !cleanEmail || !cleanComment) {
       setMessage("Please fill in all required fields.");
       return;
     }
@@ -28,21 +36,18 @@ const BlogComments = ({ blogTitle = "SocialMeUp Blog" }: BlogCommentsProps) => {
     try {
       setIsSubmitting(true);
 
-      const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/blog-comments`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name: name.trim(),
-            email: email.trim(),
-            comment: comment.trim(),
-            blogTitle,
-          }),
-        }
-      );
+      const response = await fetch(`${API_URL}/api/blog-comments`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: cleanName,
+          email: cleanEmail,
+          comment: cleanComment,
+          blogTitle,
+        }),
+      });
 
       const data = await response.json();
 
@@ -50,9 +55,8 @@ const BlogComments = ({ blogTitle = "SocialMeUp Blog" }: BlogCommentsProps) => {
         throw new Error(data.message || "Failed to submit comment.");
       }
 
-      setMessage(
-        "Thank you! Your comment has been submitted successfully."
-      );
+      setIsSuccess(true);
+      setMessage("Thank you! Your comment has been submitted successfully.");
 
       setName("");
       setEmail("");
@@ -60,10 +64,12 @@ const BlogComments = ({ blogTitle = "SocialMeUp Blog" }: BlogCommentsProps) => {
     } catch (error) {
       console.error("Comment submission error:", error);
 
+      setIsSuccess(false);
+
       setMessage(
         error instanceof Error
           ? error.message
-          : "Something went wrong. Please try again."
+          : "Something went wrong. Please try again.",
       );
     } finally {
       setIsSubmitting(false);
@@ -79,6 +85,7 @@ const BlogComments = ({ blogTitle = "SocialMeUp Blog" }: BlogCommentsProps) => {
 
         <div>
           <h2>Leave a Reply</h2>
+
           <p>Have thoughts on this article? Share your perspective below.</p>
         </div>
       </div>
@@ -96,6 +103,8 @@ const BlogComments = ({ blogTitle = "SocialMeUp Blog" }: BlogCommentsProps) => {
               onChange={(event) => setName(event.target.value)}
               required
               disabled={isSubmitting}
+              maxLength={100}
+              autoComplete="name"
             />
           </div>
 
@@ -110,6 +119,8 @@ const BlogComments = ({ blogTitle = "SocialMeUp Blog" }: BlogCommentsProps) => {
               onChange={(event) => setEmail(event.target.value)}
               required
               disabled={isSubmitting}
+              maxLength={150}
+              autoComplete="email"
             />
           </div>
         </div>
@@ -125,31 +136,23 @@ const BlogComments = ({ blogTitle = "SocialMeUp Blog" }: BlogCommentsProps) => {
             onChange={(event) => setComment(event.target.value)}
             required
             disabled={isSubmitting}
+            maxLength={5000}
           />
         </div>
 
         {message && (
           <p
-            className={
-              message.includes("successfully")
-                ? styles.successMessage
-                : styles.errorMessage
-            }
+            className={isSuccess ? styles.successMessage : styles.errorMessage}
+            role="alert"
           >
             {message}
           </p>
         )}
 
-        <button
-          type="submit"
-          className={styles.submit}
-          disabled={isSubmitting}
-        >
+        <button type="submit" className={styles.submit} disabled={isSubmitting}>
           <FiSend size={14} />
 
-          <span>
-            {isSubmitting ? "Sending..." : "Submit Comment"}
-          </span>
+          <span>{isSubmitting ? "Sending..." : "Submit Comment"}</span>
         </button>
       </form>
     </section>

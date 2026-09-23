@@ -139,7 +139,7 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       "A modern photography portfolio website designed to showcase the work of The Moments Capturer.",
     image: theMomentsCapturerImage,
-    link: "https://themomentscapturer.com/",
+    link: "https://themomentscapture.com/",
     stats: [
       "Portfolio-focused platform",
       "Visual storytelling",
