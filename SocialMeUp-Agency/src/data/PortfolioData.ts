@@ -414,8 +414,8 @@ export const portfolioProjects: PortfolioProject[] = [
     title: "Promotional Social Creative",
     description:
       "A promotional social media creative designed to present the brand message in an engaging visual format suitable for Instagram audiences.",
-    image: project3Image,
-    link: "https://www.instagram.com/p/DLH4ILIJERV/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
+    image: project4Image,
+    link: "https://www.instagram.com/p/Db5l4qyjbG9/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==",
     stats: [
       "Promotional creative",
       "Brand-focused design",
@@ -435,7 +435,7 @@ export const portfolioProjects: PortfolioProject[] = [
     title: "Branded Instagram Creative",
     description:
       "A professionally designed Instagram creative for BN BAIJAL, combining visual communication and brand presentation for social media.",
-    image: project4Image,
+    image: project3Image,
     link: "https://www.instagram.com/p/DLFRnEapPBk/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==",
     stats: [
       "Branded social creative",

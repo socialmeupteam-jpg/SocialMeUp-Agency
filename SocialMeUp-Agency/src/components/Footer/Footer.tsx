@@ -158,8 +158,8 @@ function Footer() {
             <h4>Find Us</h4>
 
             <iframe
-              title="SocialMeUp Lucknow Office Location"
-              src="https://www.google.com/maps?q=Aurangabad+Jageer%2C+KN-839%2C+Bijnor+Rd%2C+near+Manish+Yadav+Gate%2C+Sarojini+Nagar%2C+Lucknow%2C+Uttar+Pradesh+226002%2C+India&z=16&output=embed"
+              title="SocialMeUp Academy | Digital Marketing Academy In Sarojini Nagar"
+              src="https://www.google.com/maps?q=SocialMeUp+Academy+Digital+Marketing+Academy+Sarojini+Nagar+Lucknow&z=16&output=embed"
               width="100%"
               height="260"
               style={{ border: 0 }}
