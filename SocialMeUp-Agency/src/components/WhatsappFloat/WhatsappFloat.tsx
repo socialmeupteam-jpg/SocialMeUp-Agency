@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaWhatsapp, FaTimes } from "react-icons/fa";
 import styles from "./WhatsappFloat.module.css";
 
-const WHATSAPP_NUMBER = "918004857390";
+const WHATSAPP_NUMBER = "919238341904"; // Replace with your WhatsApp number with country code
 
 const WHATSAPP_MESSAGE =
   "Hello SocialMeUp! I would like to know more about your services.";
